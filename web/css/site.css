@@ -1,6 +1,13 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/montserrat/Montserrat-Regular.otf);
+}
+
+
 html,
 body {
     height: 100%;
+    font-family: Montserrat-Regular;
 }
 
 .wrap {
@@ -88,4 +95,56 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+
+/*
+================================================================================
+NEW CSS
+================================================================================
+*/
+
+.modal {
+
+}
+
+.modal-dialog {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.modal-content {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    margin-right: -200px;
+    background-color: #e9d6c5;
+    -webkit-transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    -o-transform: skew(-30deg);
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    width: 60%;
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(30deg);
+    -o-transform: skew(30deg);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-body h1 {
+    color: #8a7f83;
+    text-align: right;
 }

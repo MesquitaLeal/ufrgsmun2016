@@ -44,11 +44,11 @@ AppAsset::register($this);
                     </button>
                 </div>
                 <div class="modal-body">
-                    <?php Yii::$app->language = 'pt-BR'; ?>
+                    <?php //Yii::$app->language = 'pt-BR'; ?>
                     <a href="about"><h1><?= Yii::t('app', 'about us')?></h1></a>
                     <a href="say"><h1>the mun</h1></a>
                     <h1>committees</h1>
-                    <h1>registration</h1>
+                    <h1>apply</h1>
                     <h1>preparation</h1>
                 </div>
                 <div class="modal-footer">
