@@ -6,10 +6,9 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
+use app\models\Committees;
 
-class SiteController extends Controller
+class CommitteesController extends Controller
 {
     public function behaviors()
     {
@@ -49,7 +48,9 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $committees = Committees::find()->all();
+        print_r($committees);
+        return $this->render('index', ['model' => $committees]);
     }
 
     public function actionLogin()
@@ -95,5 +96,10 @@ class SiteController extends Controller
             'content' => 'Description set inside controller',
         ]);
         return $this->render('about');
+    }
+
+    public function actionCommittees()
+    {
+        return $this->render('committees');
     }
 }

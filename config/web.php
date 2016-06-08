@@ -8,16 +8,6 @@ $config = [
     'bootstrap' => ['log'],
     'language' => 'en-US',
     'components' => [
-        'assetManager' => [
-           'bundles' => [
-               'yii\bootstrap\BootstrapAsset' => [
-                   'sourcePath' => '@vendor',
-                   'css' => [
-                       'twbs/bootstrap-4.0.0-alpha.2/dist/css/bootstrap.css',
-                    ]
-                ],
-            ],
-        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'S7rzZLdeVvB-9BhYu4IdmH7BvqUPQ2Tf',
