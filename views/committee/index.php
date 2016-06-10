@@ -1,6 +1,17 @@
 <?php
-include_once 'committees_descriptions.php';
+
 use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\base\View;
+
+/* @var $this yii\web\View */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = Yii::t('app', 'Committees');
+?>
+
+<?php
+include_once 'committees_descriptions.php';
 ?>
 
 
@@ -8,13 +19,6 @@ use yii\helpers\Html;
     <header>
         <h1 class="header-title">committees</h1>
         <p class="header-subtitle">Below you can see the information about<br/> the committees of UFRGSMUN 2016. </p>
-        <?php
-            foreach ($model as $value) {
-                echo $value->id;
-                echo $value->name;
-                echo $value->description;
-            }
-        ?>
         <span class="arrow"></span>
     </header>
 </div>
@@ -27,6 +31,22 @@ use yii\helpers\Html;
           <stop offset="100%" stop-color="#d99715" />
     </linearGradient>
 </svg>
+
+<?php foreach ($dataProvider->models as $model):?>
+    <?= $this->render('//shared/svg');?>
+    <section class=<?= Html::encode($model->abbr)?>>
+        <article class="container">
+            <h2 class="article-title"><?= Yii::t('app', $model->name)?></h2>
+            <p class="article-description article-committee"><?= Yii::t('app', $model->description)?></p>
+            <?php foreach ($model->topic as $value) :?>
+                <button class="button" type="button" data-toggle="modal" data-target=<?= '#' . $model->abbr . $value->type ?>>Topic <?= Html::encode($value->type) ?></button>
+                <?= $this->render('//shared/modal', ['model'=>$model, 'value'=>$value]);?>
+            <?php endforeach;?>
+            <button class="button" type="button" data-toggle="modal" data-target=<?= '#staff' . $model->abbr  ?>>STAFF</button>
+            <?= $this->render('//shared/modal_staff', ['model'=>$model]);?>
+        </article>
+    </section>
+<?php endforeach;?>
 
 
 

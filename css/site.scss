@@ -400,23 +400,38 @@ HOME
     position: absolute;;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%, -50%);
+}
+
+.home-box {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px
 }
 
 .logo-cinza {
-    position: absolute;
-    right: 3%;
-    bottom: 200px;
-    width: 23%;
+    width: 100%;
+    text-align: center;
 }
 
 .home-date {
     font-family: Montserrat-Hairline;
     font-size: 1.3rem;
     color: $salmao;
-    position: absolute;
-    right: 6%;
-    bottom: 170px;
+    text-align: center;
+}
+
+/*
+================================================================================
+MODALS
+================================================================================
+*/
+
+.personal-picture {
+    width: 100px;
 }
 
 
@@ -695,17 +710,6 @@ MEDIA QUERIES
     .globo-home {
         top: 0;
     }
-    .logo-cinza {
-        width: 35%;
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .home-date {
-        top: 60%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
 
 @media (max-width: 33.9em) {
@@ -756,4 +760,12 @@ MEDIA QUERIES
     .button-history {
         width: 100px;
     }
+
+    .home-box {
+        left:50%;
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+
+
 }

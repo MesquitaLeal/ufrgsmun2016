@@ -95,3 +95,13 @@ include_once 'about_history.php';
         <?php endforeach;?>
     </article>
 </section>
+
+<section class="what-ufrgsmun right-position">
+    <article class="container">
+        <h2 class="article-title">Meet us</h2>
+        <p class="article-description">
+            Do you want to know who is behind this year edition? Then click in the buttons bellow and discover it!
+            
+        </p>
+    </article>
+</section>

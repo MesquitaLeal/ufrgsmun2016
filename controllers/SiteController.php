@@ -11,6 +11,8 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+
+
     public function behaviors()
     {
         return [
@@ -49,6 +51,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        $this->layout = 'main_index';
         return $this->render('index');
     }
 
@@ -95,5 +98,11 @@ class SiteController extends Controller
             'content' => 'Description set inside controller',
         ]);
         return $this->render('about');
+    }
+
+    public function actionApply()
+    {
+        Yii::$app->view->title = 'UFRGSMUN 2016 - Apply';
+        return $this->render('apply');
     }
 }

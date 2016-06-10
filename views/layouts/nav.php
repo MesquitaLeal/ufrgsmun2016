@@ -34,8 +34,8 @@ Modal::end();
                     <div class="modal-menu">
                         <a href=<?= Url::to(['site/about'])?>><h1><?= Yii::t('app', 'about us')?></h1></a><br/>
                         <a href=<?= Url::to(['site/about'])?>><h1><?= Yii::t('app', 'the mun')?></h1></a><br/>
-                        <a href=<?= Url::to(['committees/index']);?>><h1><?= Yii::t('app', 'committees')?></h1><br/></a>
-                        <a href=<?= Url::to(['site/about'])?>><h1><?= Yii::t('app', 'apply')?></h1></a><br/>
+                        <a href=<?= Url::to(['committee/index']);?>><h1><?= Yii::t('app', 'committees')?></h1><br/></a>
+                        <a href=<?= Url::to(['site/apply'])?>><h1><?= Yii::t('app', 'apply')?></h1></a><br/>
                     </div>
                 </div>
                 <div class="modal-footer">
