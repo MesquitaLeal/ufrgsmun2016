@@ -9,7 +9,7 @@ Modal::end();
 
 <nav>
     <a href="index.php">
-        <img class="logo-home" src=<?=Url::to(['@web/images/logo_horizontal.png'])?> alt="Logo horizontal" />
+        <img class="logo-home" src='assets_b/images/logo_horizontal.png' alt="Logo horizontal" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#navBar">
         <span>&#9776;</span>
