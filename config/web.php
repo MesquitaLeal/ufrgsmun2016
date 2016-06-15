@@ -40,11 +40,14 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
         'urlManager' => [
-            'enablePrettyUrl' => true,
+            'enablePrettyUrl' => false,
             'showScriptName' => false,
-            'enableStrictParsing'=>false,
+            //'enableStrictParsing'=>false,
             'rules' => [
-                '<alias:\w+>' => 'site/<alias>',
+                //'<alias:\w+>' => 'site/<alias>',
+                '<controller:\w+>/<id:\d+>' => '/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '/',
+                '<controller:\w+>/<action:\w+>' => '/',
             ],
         ],
         'i18n' => [

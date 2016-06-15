@@ -2,11 +2,11 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-include_once("../analyticstracking.php");
+include_once("analyticstracking.php");
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
+use app\assets_b\AppAsset;
 
 AppAsset::register($this);
 ?>

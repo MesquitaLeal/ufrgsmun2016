@@ -9,7 +9,7 @@ $this->title = 'UFRGSMUN 2016';
     <!--<h1 class="moto">UFRGSMUN 2016 is coming!</h1>
     <img class="globo-home img-responsive" src="images/globo-cortado.png" alt="" />-->
     <div class="home-box">
-        <img class="logo-cinza" src="images/logo-horizontal-cinza.png" alt="" />
+        <img class="logo-cinza" src="assets_b/images/logo-horizontal-cinza.png" alt="" />
         <h2 class="home-date">is coming</h2>
     </div>
 
