@@ -1,10 +1,36 @@
 <?php
 include_once 'about_history.php';
+if (Yii::$app->language == 'en-US') {
+    include_once 'about_projects_en.php';    
+}
+else {
+    include_once 'about_projects_pt.php';       
+}
+
+$sponsors = array (
+    'audiplo.png',
+    'cafe.png',
+    'ceri.jpg',
+    'fce.png',
+    'lemonde.jpg',
+    'dacolonia.png',
+    'gang.jpg',
+    'grafica.png',
+    'prorext.png',
+);
+
+$muns = array (
+    'amun.png',
+    'famun.jpg',
+    'temas.png',
+    'pampasul.png',
+);
+
 ?>
 
 <div class="container">
     <header>
-        <h1 class="header-title">about us</h1>
+        <h1 class="header-title about-title">about us</h1>
         <p class="header-subtitle">Do you want to know a little more about<br/>UFRGSMUN 2016? Then just continue scrolling.</p>
         <span class="arrow"></span>
     </header>
@@ -13,9 +39,9 @@ include_once 'about_history.php';
 <svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
     <path d="M0,0 L100,0 L0,100 L0,0" class="diagonal-brown" />
     <path d="M100,0 L0,100 L100,100 L100,0" class="diagonal-whatMun-high" style="fill: url(#gradient-whatMun-high)" />
-    <linearGradient id="gradient-whatMun-high" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#c92424" />
-          <stop offset="100%" stop-color="#d22525" />
+    <linearGradient id="gradient-whatMun-high" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#911A38" />
+          <stop offset="100%" stop-color="#B41F34" />
     </linearGradient>
 </svg>
 
@@ -31,13 +57,13 @@ include_once 'about_history.php';
 <svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
     <path d="M0,0 L100,0 L0,100 L0,0" class="diagonal-whatMun-low" style="fill: url(#gradient-whatMun-low)"/>
     <path d="M100,0 L0,100 L100,100 L100,0" class="diagonal-whatMun-high" style="fill: url(#gradient-whatUfrgsmun-high)" />
-    <linearGradient id="gradient-whatMun-low" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#dd4242" />
-          <stop offset="100%" stop-color="#df4b4b" />
+    <linearGradient id="gradient-whatMun-low" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#911A38" />
+          <stop offset="100%" stop-color="#B41F34" />
     </linearGradient>
-    <linearGradient id="gradient-whatUfrgsmun-high" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#ee4018" />
-          <stop offset="100%" stop-color="#ee4822" />
+    <linearGradient id="gradient-whatUfrgsmun-high" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#DF4C4C" />
+          <stop offset="100%" stop-color="#F26F52" />
     </linearGradient>
 </svg>
 
@@ -51,19 +77,15 @@ include_once 'about_history.php';
 </section>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <path d="M0,0 L100,0 L100,100 L0,0" class="diagonal-whatUfrgsmun-low" style="fill: url(#gradient-whatUfrgsmun-low)"/>
-    <path d="M0,0 L100,100 L0,100 L0,0" class="diagonal-history-high" style="fill: url(#gradient-history-high)"/>
-    <linearGradient id="gradient-whatUfrgsmun-low" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#f16748" />
-          <stop offset="100%" stop-color="#f26f51" />
-    </linearGradient>
-    <linearGradient id="gradient-history-high" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#927260" />
-          <stop offset="100%" stop-color="#987764" />
+    <path d="M0,0 L100,0 L100,100 L0,0" style="fill: url(#gradient-whatUfrgsmun-low)"/>
+    <path d="M0,0 L100,100 L0,100 L0,0" class="meet-us-diagonal" />
+    <linearGradient id="gradient-whatUfrgsmun-low" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#DF4C4C" />
+          <stop offset="100%" stop-color="#F26F52" />
     </linearGradient>
 </svg>
 
-<section class="what-ufrgsmun">
+<section class="meet-us">
     <article class="container">
         <h2 class="article-title">Meet us</h2>
         <p class="article-description">
@@ -81,11 +103,18 @@ include_once 'about_history.php';
                             </button>
                         </div>
                         <div class="modal-body modal-delimiter">
-                            <h3 class="modal-title">Secretariat</h3>
+                            <h2 class="topic-committee"><?= Yii::t('app', 'Secretariat')?></h2>
+                            <h3 class="topic-title">MEET THE STAFF</h3>
                             <?php foreach($dataProvider->models as $pessoa) :?>
                                 <?php if($pessoa->staff_id <= 3 && !$pessoa->staff_id == NULL) :?>
-                                    <h4 class="modal-subtitle"><?= $pessoa->name; ?></h4>
-                                    <p class="modal-text"><?= $pessoa->description; ?></p>
+                                    <?php if (!$pessoa->image == NULL) :?>
+                                        <img class="person-picture" src='assets_b/images/staff/teste.png' alt="Personal picture" />
+                                    <?php endif?>
+                                    <h2 class="person-name">
+                                        <?= Yii::t('app', $pessoa->name)?>
+                                        <span><?= $pessoa->staff->role?></span>
+                                    </h2>
+                                    <p class="person-description"><?= Yii::t('app', $pessoa->description)?></p>
                                 <?php endif ?>
                             <?php endforeach ?>
                         </div>
@@ -103,11 +132,18 @@ include_once 'about_history.php';
                             </button>
                         </div>
                         <div class="modal-body modal-delimiter">
-                            <h3 class="modal-title">Administrative</h3>
+                            <h2 class="topic-committee"><?= Yii::t('app', 'Administrative')?></h2>
+                            <h3 class="topic-title">MEET THE STAFF</h3>
                             <?php foreach($dataProvider->models as $pessoa) :?>
-                                <?php if($pessoa->staff_id >= 4) :?>
-                                    <h4 class="modal-subtitle"><?= $pessoa->name; ?></h4>
-                                    <p class="modal-text"><?= $pessoa->description; ?></p>
+                                <?php if($pessoa->staff_id >= 4 && !$pessoa->staff_id == NULL) :?>
+                                    <?php if (!$pessoa->image == NULL) :?>
+                                        <img class="person-picture" src='assets_b/images/staff/teste.png' alt="Personal picture" />
+                                    <?php endif?>
+                                    <h2 class="person-name">
+                                        <?= Yii::t('app', $pessoa->name)?>
+                                        <span><?= $pessoa->staff->role?></span>
+                                    </h2>
+                                    <p class="person-description"><?= Yii::t('app', $pessoa->description)?></p>
                                 <?php endif ?>
                             <?php endforeach ?>
                         </div>
@@ -119,16 +155,8 @@ include_once 'about_history.php';
 </section>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <path d="M0,0 L100,0 L100,100 L0,0" class="diagonal-whatUfrgsmun-low" style="fill: url(#gradient-whatUfrgsmun-low)"/>
-    <path d="M0,0 L100,100 L0,100 L0,0" class="diagonal-history-high" style="fill: url(#gradient-history-high)"/>
-    <linearGradient id="gradient-whatUfrgsmun-low" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#f16748" />
-          <stop offset="100%" stop-color="#f26f51" />
-    </linearGradient>
-    <linearGradient id="gradient-history-high" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#927260" />
-          <stop offset="100%" stop-color="#987764" />
-    </linearGradient>
+    <path d="M0,0 L100,0 L0,100 L0,0" class="meet-us-diagonal" />
+    <path d="M0,100 L100,100 L100,0 L0,100" class="history-diagonal" />
 </svg>
 
 <section class="history">
@@ -149,8 +177,8 @@ include_once 'about_history.php';
                                 </button>
                             </div>
                             <div class="modal-body modal-delimiter">
-                                <h3 class="modal-title"><?php echo $year['year'] . ' - ' . $year['edition']?></h3>
-                                <h4 class="modal-subtitle"><?php echo $year['name']?></h4>
+                                <h2 class="topic-committee"><?php echo $year['year'] . ' - ' . $year['edition']?></h2>
+                                <h3 class="topic-title"><?= $year['name'] ?></h3>
                                 <p class="modal-text"><?php echo $year['info'] ?></p>
                                 <?php if(!$year['website'] == NULL): ?>
                                     <p class="modal-text">Website: <a href="<?php echo $year['website'] ?>"><i class="fa fa-external-link" aria-hidden="true"></i></a></p>
@@ -164,17 +192,60 @@ include_once 'about_history.php';
     </article>
 </section>
 
-<section class="what-ufrgsmun">
+<svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,0 L100,0 L0,100 L0,0" class="history-diagonal" />
+    <path d="M100,0 L0,100 L100,100 L100,0" class="diagonal-whatMun-high" style="fill: url(#gradient-whatMun-high)" />
+    <linearGradient id="gradient-whatMun-high" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#911A38" />
+          <stop offset="100%" stop-color="#B41F34" />
+    </linearGradient>
+</svg>
+
+<section class="what-mun">
     <article class="container">
         <h2 class="article-title">Partner Projects</h2>
         <p class="article-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         </p>
-        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#bis">BIS</button>
-        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#ufrgsmundi">UFRGSMUNDI</button>
-        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#ripe">RIPE</button>
+        <?php foreach ($projects as $key => $value) :?>
+            <button class="button button-bigger" type="button" data-toggle="modal" data-target="#<?= $key?>"><?= $key?></button>
+            <div class="modal fade" id="<?= $key?>" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-wrap">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body modal-delimiter">
+                                <h2 class="topic-committee"><?= Yii::t('app', 'Partner Projects')?></h2>
+                                <h3 class="topic-title"><?= $value['name'] ?></h3>
+                                 <div class='square'>
+                                    <img class="sponsor-img" src="assets_b/images/projects/<?= $value['image']?>">
+                                </div>
+                                <p class="modal-text"><?= $value['description'] ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </article>
 </section>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,0 L100,0 L0,100 L0,0" class="diagonal-whatMun-low" style="fill: url(#gradient-whatMun-low)"/>
+    <path d="M100,0 L0,100 L100,100 L100,0" class="diagonal-whatMun-high" style="fill: url(#gradient-whatUfrgsmun-high)" />
+    <linearGradient id="gradient-whatMun-low" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#911A38" />
+          <stop offset="100%" stop-color="#B41F34" />
+    </linearGradient>
+    <linearGradient id="gradient-whatUfrgsmun-high" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#DF4C4C" />
+          <stop offset="100%" stop-color="#F26F52" />
+    </linearGradient>
+</svg>
 
 <section class="what-ufrgsmun">
     <article class="container">
@@ -182,7 +253,55 @@ include_once 'about_history.php';
         <p class="article-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         </p>
-        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#secretariat">Sponsors</button>
-        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#administrative">Muns Partners</button>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#sponsors">Sponsors</button>
+        <div class="modal fade" id="sponsors" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h2 class="topic-committee"><?= Yii::t('app', 'Sponsors and MUNs Partners')?></h2>
+                            <h3 class="topic-title">SPONSORS</h3>
+                            <?php foreach($sponsors as $sponsor) :?>
+                                <div class='square'>
+                                    <img class="sponsor-img" src="assets_b/images/sponsors/<?= $sponsor?>">
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#muns">Muns Partners</button>
+        <div class="modal fade" id="muns" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h2 class="topic-committee"><?= Yii::t('app', 'Sponsors and MUNs Partners')?></h2>
+                            <h3 class="topic-title">MUNs Partners</h3>
+                            <?php foreach($muns as $mun) :?>
+                                <div class='square'>
+                                    <img class="sponsor-img" src="assets_b/images/muns/<?= $mun?>">
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </article>
 </section>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="diagonal-last" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,0 L100,0 L60,100 L0,100 L0,0" class="triangle-footer"/>
+</svg>

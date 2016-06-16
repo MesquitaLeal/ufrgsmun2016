@@ -243,7 +243,6 @@ header {
   header .header-title {
     font-size: 3rem;
     letter-spacing: 1px;
-    color: #8a7f83;
     margin-top: 70px; }
   header .header-subtitle {
     font-family: Hind-Light;
@@ -382,7 +381,7 @@ MODALS
 .person-name {
   background-color: #fef8f4;
   float: right;
-  padding: 30px 30px 30px 70px;
+  padding: 30px 30px 30px 75px;
   margin-top: 10px;
   width: 300px;
   font-family: Montserrat-Regular;
@@ -409,17 +408,46 @@ MODALS
 ABOUT
 ================================================================================
 */
+.about-title {
+  color: #B02739; }
+
 .what-mun {
-  background: linear-gradient(#d22525, #dd4242); }
+  background: linear-gradient(to right, #911A38, #B41F34); }
 
 .what-ufrgsmun {
-  background: linear-gradient(#ee4822, #f16748); }
+  background: linear-gradient(to right, #DF4C4C, #F26F52); }
+
+.meet-us {
+  background-color: #AC9281; }
+
+.meet-us-diagonal {
+  fill: #AC9281; }
 
 .history {
-  background: linear-gradient(#987764, #a98d7c); }
+  background: #C4A495; }
   .history .button:hover {
     color: #ad9282;
     background-color: white; }
+
+.history-diagonal {
+  fill: #C4A495; }
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: inline-block; }
+
+.sponsor-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 150px;
+  max-height: 150px; }
 
 /*
 ================================================================================

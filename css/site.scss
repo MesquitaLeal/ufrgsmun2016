@@ -268,7 +268,6 @@ header {
     .header-title {
         font-size: 3rem;
         letter-spacing: 1px;
-        color: $brown;
         margin-top: 70px;
     }
     .header-subtitle {
@@ -438,7 +437,7 @@ MODALS
 .person-name {
     background-color: $upper-east;
     float: right;
-    padding: 30px 30px 30px 70px;
+    padding: 30px 30px 30px 75px;
     margin-top: 10px;
     width: 300px;
     font-family: Montserrat-Regular;
@@ -471,20 +470,55 @@ ABOUT
 ================================================================================
 */
 
+.about-title {
+    color: $about;
+}
+
 .what-mun {
-    background: linear-gradient(darken($rosa, 10%), darken($rosa, 2%));
+    background: linear-gradient(to right, $wine-up, $wine-down);
 }
 
 .what-ufrgsmun {
-    background: linear-gradient(darken($salmao, 10%), darken($salmao, 2%));
+    background: linear-gradient(to right, $salmon-up, $salmon-down);
+}
+
+.meet-us {
+    background-color: $meet-us;
+}
+
+.meet-us-diagonal {
+    fill: $meet-us;
 }
 
 .history {
-    background: linear-gradient(darken($neutra, 10%), darken($neutra, 2%));
+    background: $history;
     .button:hover {
         color: $neutra;
         background-color: white;
     }
+}
+
+.history-diagonal {
+    fill: $history;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.sponsor-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 150px;
+    max-height: 150px;
 }
 
 /*
