@@ -12,12 +12,17 @@ use yii\helpers\Url;
                     </button>
                 </div>
                 <div class="modal-body modal-delimiter">
+                    <h2 class="topic-committee"><?= Yii::t('app', $model->abbr)?></h2>
+                    <h3 class="topic-title">MEET THE STAFF</h3>
                     <?php foreach ($model->pessoa as $value) :?>
                         <?php if (!$value->image == NULL) :?>
-                            <img class="personal-picture img-responsible" src=<?=Url::to(['@web/images/staff/'.$value->image])?> alt="Personal picture" />
+                            <img class="person-picture" src='assets_b/images/staff/teste.png' alt="Personal picture" />
                         <?php endif?>
-                        <h2 class="topic-committee"><?= Yii::t('app', $value->name)?></h2>
-                        <p class="topic-description"><?= Yii::t('app', $value->description)?></p>
+                        <h2 class="person-name">
+                            <?= Yii::t('app', $value->name)?>
+                            <span><?= ($value->is_director == 1) ? 'Director' : 'Assistant Director'?></span>
+                        </h2>
+                        <p class="person-description"><?= Yii::t('app', $value->description)?></p>
                     <?php endforeach ?>
                 </div>
             </div>

@@ -10,8 +10,10 @@
                 <div class="modal-body modal-delimiter">
                     <h2 class="topic-committee"><?= Yii::t('app', $model->abbr)?></h2>
                     <h3 class="topic-title"><?= Yii::t('app', $value->name)?></h3>
-                    <p class="topic-text"><<?= Yii::t('app', $value->description)?></p>
-                    <p class="topic-references">References:<br/><?= Yii::t('app', $value->references)?></p>
+                    <div class="topic-text"><?= Yii::t('app', $value->description)?></div>
+                    <?php if(!$value->references == NULL) : ?>
+                        <p class="topic-references">References:<br/><?= Yii::t('app', $value->references)?></p>
+                    <?php endif;?>
                 </div>
             </div>
         </div>

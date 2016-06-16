@@ -1,7 +1,3 @@
-<?php
-include_once 'nav.php';
-?>
-
 <div class="container">
     <header>
         <h1 class="header-title">the mun</h1>

@@ -63,6 +63,74 @@ include_once 'about_history.php';
     </linearGradient>
 </svg>
 
+<section class="what-ufrgsmun">
+    <article class="container">
+        <h2 class="article-title">Meet us</h2>
+        <p class="article-description">
+            Do you want to know who is behind this year edition? Then click in the buttons bellow and discover it!
+        </p>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#secretariat">Secretariat</button>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#administrative">Administrative</button>
+        <div class="modal fade" id="secretariat" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h3 class="modal-title">Secretariat</h3>
+                            <?php foreach($dataProvider->models as $pessoa) :?>
+                                <?php if($pessoa->staff_id <= 3 && !$pessoa->staff_id == NULL) :?>
+                                    <h4 class="modal-subtitle"><?= $pessoa->name; ?></h4>
+                                    <p class="modal-text"><?= $pessoa->description; ?></p>
+                                <?php endif ?>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="administrative" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h3 class="modal-title">Administrative</h3>
+                            <?php foreach($dataProvider->models as $pessoa) :?>
+                                <?php if($pessoa->staff_id >= 4) :?>
+                                    <h4 class="modal-subtitle"><?= $pessoa->name; ?></h4>
+                                    <p class="modal-text"><?= $pessoa->description; ?></p>
+                                <?php endif ?>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,0 L100,0 L100,100 L0,0" class="diagonal-whatUfrgsmun-low" style="fill: url(#gradient-whatUfrgsmun-low)"/>
+    <path d="M0,0 L100,100 L0,100 L0,0" class="diagonal-history-high" style="fill: url(#gradient-history-high)"/>
+    <linearGradient id="gradient-whatUfrgsmun-low" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#f16748" />
+          <stop offset="100%" stop-color="#f26f51" />
+    </linearGradient>
+    <linearGradient id="gradient-history-high" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#927260" />
+          <stop offset="100%" stop-color="#987764" />
+    </linearGradient>
+</svg>
+
 <section class="history">
     <article class="container">
         <h2 class="article-title">Our history</h2>
@@ -96,12 +164,25 @@ include_once 'about_history.php';
     </article>
 </section>
 
-<section class="what-ufrgsmun right-position">
+<section class="what-ufrgsmun">
     <article class="container">
-        <h2 class="article-title">Meet us</h2>
+        <h2 class="article-title">Partner Projects</h2>
         <p class="article-description">
-            Do you want to know who is behind this year edition? Then click in the buttons bellow and discover it!
-            
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         </p>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#bis">BIS</button>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#ufrgsmundi">UFRGSMUNDI</button>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#ripe">RIPE</button>
+    </article>
+</section>
+
+<section class="what-ufrgsmun">
+    <article class="container">
+        <h2 class="article-title">Sponsors and Partners</h2>
+        <p class="article-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#secretariat">Sponsors</button>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#administrative">Muns Partners</button>
     </article>
 </section>

@@ -184,9 +184,10 @@ nav {
     bottom: 50px;
     overflow-y: scroll;
     width: 100%;
+    text-align: right;
+    color: $brown;
     h1 {
         color: $brown;
-        text-align: right;
     }
     &.modal-delimiter {
         width: 60%;
@@ -338,6 +339,10 @@ header {
     margin-bottom: 10px;
 }
 
+.button-bigger {
+    width: 200px;
+}
+
 .modal-title {
     font-family: Montserrat-Regular;
     font-size: 2rem;
@@ -430,8 +435,33 @@ MODALS
 ================================================================================
 */
 
-.personal-picture {
-    width: 100px;
+.person-name {
+    background-color: $upper-east;
+    float: right;
+    padding: 30px 30px 30px 70px;
+    margin-top: 10px;
+    width: 300px;
+    font-family: Montserrat-Regular;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    span {
+        display: block;
+        font-size: .9rem;
+        text-transform: capitalize;
+    }
+}
+
+.person-picture {
+    position: relative;
+    top: -5px;
+    right: -90px;
+    width: 150px;
+    z-index: 1;
+}
+
+.person-description {
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 
@@ -504,6 +534,9 @@ section {
         color: $asean;
         background-color: white;
     }
+    .topic-committee  {
+        color: $asean;
+    }
 }
 
 .wb {
@@ -511,6 +544,9 @@ section {
     .button:hover {
         color: $wb;
         background-color: white;
+    }
+    .topic-committee  {
+        color: $wb;
     }
 }
 
@@ -520,6 +556,9 @@ section {
         color: $disec;
         background-color: white;
     }
+    .topic-committee  {
+        color: $disec;
+    }
 }
 
 .icj {
@@ -527,6 +566,9 @@ section {
     .button:hover {
         color: $icj;
         background-color: white;
+    }
+    .topic-committee  {
+        color: $icj;
     }
 }
 
@@ -536,6 +578,9 @@ section {
         color: $ip;
         background-color: white;
     }
+    .topic-committee  {
+        color: $ip;
+    }
 }
 
 .oea {
@@ -543,6 +588,9 @@ section {
     .button:hover {
         color: $oea;
         background-color: white;
+    }
+    .topic-committee  {
+        color: $oea;
     }
 }
 
@@ -552,6 +600,9 @@ section {
         color: $au;
         background-color: white;
     }
+    .topic-committee  {
+        color: $au;
+    }
 }
 
 .unea {
@@ -560,6 +611,9 @@ section {
         color: $unea;
         background-color: white;
     }
+    .topic-committee  {
+        color: $unea;
+    }
 }
 
 .unsc {
@@ -567,6 +621,9 @@ section {
     .button:hover {
         color: $unsc;
         background-color: white;
+    }
+    .topic-committee  {
+        color: $unsc;
     }
 }
 
@@ -659,15 +716,19 @@ section {
 }
 
 .topic-committee,
-.topic-title,
-.topic-text,
-.topic-references {
-    color: $brown;
+.topic-title {
+    font-family: Montserrat-Regular;
 }
 
 .topic-committee {
-    font-family: Montserrat-Regular;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
     text-transform: uppercase;
+}
+
+.topic-title {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
 }
 
 .topic-references {
@@ -765,6 +826,15 @@ MEDIA QUERIES
         left:50%;
         right: 0;
         transform: translate(-50%, -50%);
+    }
+
+    .person-name {
+        padding: 30px;
+        width: 100%;
+    }
+
+    .person-picture {
+        display: none;
     }
 
 

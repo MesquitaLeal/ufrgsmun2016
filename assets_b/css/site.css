@@ -172,10 +172,11 @@ nav {
   top: 50px;
   bottom: 50px;
   overflow-y: scroll;
-  width: 100%; }
+  width: 100%;
+  text-align: right;
+  color: #8a7f83; }
   .modal-body h1 {
-    color: #8a7f83;
-    text-align: right; }
+    color: #8a7f83; }
   .modal-body.modal-delimiter {
     width: 60%; }
 
@@ -299,6 +300,9 @@ header {
   width: 140px;
   margin-bottom: 10px; }
 
+.button-bigger {
+  width: 200px; }
+
 .modal-title {
   font-family: Montserrat-Regular;
   font-size: 2rem;
@@ -375,8 +379,30 @@ HOME
 MODALS
 ================================================================================
 */
-.personal-picture {
-  width: 100px; }
+.person-name {
+  background-color: #fef8f4;
+  float: right;
+  padding: 30px 30px 30px 70px;
+  margin-top: 10px;
+  width: 300px;
+  font-family: Montserrat-Regular;
+  font-size: 1.2rem;
+  text-transform: uppercase; }
+  .person-name span {
+    display: block;
+    font-size: .9rem;
+    text-transform: capitalize; }
+
+.person-picture {
+  position: relative;
+  top: -5px;
+  right: -90px;
+  width: 150px;
+  z-index: 1; }
+
+.person-description {
+  margin-top: 20px;
+  margin-bottom: 50px; }
 
 /*
 ================================================================================
@@ -432,54 +458,72 @@ section {
   .asean .button:hover {
     color: #efbd5b;
     background-color: white; }
+  .asean .topic-committee {
+    color: #efbd5b; }
 
 .wb {
   background: linear-gradient(#0d6659, #17ae98); }
   .wb .button:hover {
     color: #18b7a0;
     background-color: white; }
+  .wb .topic-committee {
+    color: #18b7a0; }
 
 .disec {
   background: linear-gradient(#573332, #8b514f); }
   .disec .button:hover {
     color: #915553;
     background-color: white; }
+  .disec .topic-committee {
+    color: #915553; }
 
 .icj {
   background: linear-gradient(#800d1b, #ca152b); }
   .icj .button:hover {
     color: #d3162d;
     background-color: white; }
+  .icj .topic-committee {
+    color: #d3162d; }
 
 .ip {
   background: linear-gradient(#ad470e, #ed6a1f); }
   .ip .button:hover {
     color: #ee7028;
     background-color: white; }
+  .ip .topic-committee {
+    color: #ee7028; }
 
 .oea {
   background: linear-gradient(#692e60, #a24794); }
   .oea .button:hover {
     color: #a94a9b;
     background-color: white; }
+  .oea .topic-committee {
+    color: #a94a9b; }
 
 .au {
   background: linear-gradient(#29712e, #3fad46); }
   .au .button:hover {
     color: #42b449;
     background-color: white; }
+  .au .topic-committee {
+    color: #42b449; }
 
 .unea {
   background: linear-gradient(#737c25, #adbb38); }
   .unea .button:hover {
     color: #b4c33a;
     background-color: white; }
+  .unea .topic-committee {
+    color: #b4c33a; }
 
 .unsc {
   background: linear-gradient(#2e5273, #457cae); }
   .unsc .button:hover {
     color: #4881b5;
     background-color: white; }
+  .unsc .topic-committee {
+    color: #4881b5; }
 
 .diagonal-asean-high {
   fill: url(#gradient-asean-high); }
@@ -549,14 +593,17 @@ section {
     width: 100%; }
 
 .topic-committee,
-.topic-title,
-.topic-text,
-.topic-references {
-  color: #8a7f83; }
+.topic-title {
+  font-family: Montserrat-Regular; }
 
 .topic-committee {
-  font-family: Montserrat-Regular;
+  font-size: 1.2rem;
+  margin-bottom: 0px;
   text-transform: uppercase; }
+
+.topic-title {
+  font-size: 1.4rem;
+  margin-bottom: 30px; }
 
 .topic-references {
   font-size: 0.8rem;
@@ -621,6 +668,11 @@ MEDIA QUERIES
   .home-box {
     left: 50%;
     right: 0;
-    transform: translate(-50%, -50%); } }
+    transform: translate(-50%, -50%); }
+  .person-name {
+    padding: 30px;
+    width: 100%; }
+  .person-picture {
+    display: none; } }
 
 /*# sourceMappingURL=site.css.map */

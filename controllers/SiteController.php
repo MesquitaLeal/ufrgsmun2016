@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use Yii;
+use app\models\Pessoa;
+use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -97,12 +99,21 @@ class SiteController extends Controller
             'name' => 'description',
             'content' => 'Description set inside controller',
         ]);
-        return $this->render('about');
+        $dataProvider = new ActiveDataProvider([
+            'query' => Pessoa::find(),
+        ]);
+        return $this->render('about', ['dataProvider'=>$dataProvider]);
     }
 
     public function actionApply()
     {
         Yii::$app->view->title = 'UFRGSMUN 2016 - Apply';
         return $this->render('apply');
+    }
+
+    public function actionMun()
+    {
+        Yii::$app->view->title = 'UFRGSMUN 2016 - Apply';
+        return $this->render('mun');
     }
 }
