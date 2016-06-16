@@ -302,6 +302,3 @@ $muns = array (
     </article>
 </section>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="diagonal-last" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <path d="M0,0 L100,0 L60,100 L0,100 L0,0" class="triangle-footer"/>
-</svg>

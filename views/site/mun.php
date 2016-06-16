@@ -1,6 +1,6 @@
 <div class="container">
     <header>
-        <h1 class="header-title">the mun</h1>
+        <h1 class="header-title mun-title">the mun</h1>
         <p class="header-subtitle">Do you want to know a little more about<br/>UFRGSMUN 2016? Then just continue scrolling.</p>
         <span class="arrow"></span>
     </header>
@@ -10,8 +10,8 @@
     <path d="M0,0 L100,0 L0,100 L0,0" class="diagonal-brown" />
     <path d="M100,0 L0,100 L100,100 L100,0" class="diagonal-location-high" style="fill: url(#gradient-location-high)" />
     <linearGradient id="gradient-location-high" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#5d1123" />
-          <stop offset="100%" stop-color="#661227" />
+          <stop offset="0%" stop-color="#60175e" />
+          <stop offset="100%" stop-color="#681966" />
     </linearGradient>
 </svg>
 
@@ -67,18 +67,14 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
     <path d="M0,0 L100,0 L0,100 L0,0" style="fill: url(#gradient-location-low)" />
-    <path d="M100,0 L0,100 L100,100 L100,0" style="fill: url(#gradient-schedule-high)"/>
+    <path d="M100,0 L0,100 L100,100 L100,0" class="schedule-diagonal"/>
     <linearGradient id="gradient-location-low" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#881834" />
-          <stop offset="100%" stop-color="#911a37" />
-    </linearGradient>
-    <linearGradient id="gradient-schedule-high" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#927260" />
-          <stop offset="100%" stop-color="#987764" />
+          <stop offset="0%" stop-color="#7a267d" />
+          <stop offset="100%" stop-color="#852885" />
     </linearGradient>
 </svg>
 
-<section class="schedule">
+<section class="schedule right-position">
     <article class="container">
         <h2 class="article-title">Schedules</h2>
         <p class="article-description">
@@ -147,15 +143,11 @@
 </section>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <path d="M0,0 L100,0 L0,100 L0,0" style="fill: url(#gradient-schedule-low)" />
-    <path d="M100,0 L0,100 L100,100 L100,0" style="fill: url(#gradient-policies-high)"/>
-    <linearGradient id="gradient-schedule-low" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#a98d7c" />
-          <stop offset="100%" stop-color="#ad9282" />
-    </linearGradient>
-    <linearGradient id="gradient-policies-high" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#561956" />
-          <stop offset="100%" stop-color="#5e1b5e" />
+    <path d="M0,0 L100,0 L100,100 L0,0" class="schedule-diagonal" />
+    <path d="M0,0 L0,100 L100,100 L0,0" style="fill: url(#gradient-policies-high)"/>
+    <linearGradient id="gradient-policies-high" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#611331" />
+          <stop offset="100%" stop-color="#911a38" />
     </linearGradient>
 </svg>
 

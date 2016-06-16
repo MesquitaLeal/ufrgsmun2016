@@ -315,6 +315,11 @@ header {
     height: 100px;
 }
 
+.diagonal-last {
+    width: 500px;
+    height: 250px;
+}
+
 .diagonal-brown {
     fill: #e9d6c5;
 }
@@ -476,24 +481,36 @@ ABOUT
 
 .what-mun {
     background: linear-gradient(to right, $wine-up, $wine-down);
+    .button:hover {
+        color: $wine-up;
+        background-color: white;
+    }
 }
 
 .what-ufrgsmun {
     background: linear-gradient(to right, $salmon-up, $salmon-down);
+    .button:hover {
+        color: $salmon-up;
+        background-color: white;
+    }
 }
 
 .meet-us {
-    background-color: $meet-us;
+    background-color: $light-brown;
+    .button:hover {
+        color: $light-brown;
+        background-color: white;
+    }
 }
 
 .meet-us-diagonal {
-    fill: $meet-us;
+    fill: $light-brown;
 }
 
 .history {
     background: $history;
     .button:hover {
-        color: $neutra;
+        color: $history;
         background-color: white;
     }
 }
@@ -527,26 +544,34 @@ THE MUN
 ================================================================================
 */
 
+.mun-title {
+    color: $mun;
+}
+
 .location {
-    background: linear-gradient(darken($vinho, 10%), darken($vinho, 2%));
+    background: linear-gradient(lighten($purple-up, 2%), darken($purple-down, 2%));
     .button:hover {
-        color: $vinho;
+        color: $purple-up;
         background-color: white;
     }
 }
 
 .schedule {
-    background: linear-gradient(darken($neutra, 10%), darken($neutra, 2%));
+    background: $light-brown;
     .button:hover {
-        color: $neutra;
+        color: $light-brown;
         background-color: white;
     }
 }
 
+.schedule-diagonal {
+    fill: #AC9281;
+}
+
 .policies {
-    background: linear-gradient(darken($violeta, 10%), darken($violeta, 2%));
+    background: linear-gradient(to right, $dark-wine, $wine-up);
     .button:hover {
-        color: $violeta;
+        color: $dark-wine;
         background-color: white;
     }
 }

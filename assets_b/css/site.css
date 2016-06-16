@@ -280,6 +280,10 @@ header {
   width: 100%;
   height: 100px; }
 
+.diagonal-last {
+  width: 500px;
+  height: 250px; }
+
 .diagonal-brown {
   fill: #e9d6c5; }
 
@@ -413,12 +417,21 @@ ABOUT
 
 .what-mun {
   background: linear-gradient(to right, #911A38, #B41F34); }
+  .what-mun .button:hover {
+    color: #911A38;
+    background-color: white; }
 
 .what-ufrgsmun {
   background: linear-gradient(to right, #DF4C4C, #F26F52); }
+  .what-ufrgsmun .button:hover {
+    color: #DF4C4C;
+    background-color: white; }
 
 .meet-us {
   background-color: #AC9281; }
+  .meet-us .button:hover {
+    color: #AC9281;
+    background-color: white; }
 
 .meet-us-diagonal {
   fill: #AC9281; }
@@ -426,7 +439,7 @@ ABOUT
 .history {
   background: #C4A495; }
   .history .button:hover {
-    color: #ad9282;
+    color: #C4A495;
     background-color: white; }
 
 .history-diagonal {
@@ -454,22 +467,28 @@ ABOUT
 THE MUN
 ================================================================================
 */
+.mun-title {
+  color: #822c81; }
+
 .location {
-  background: linear-gradient(#661227, #881834); }
+  background: linear-gradient(#681966, #7a267d); }
   .location .button:hover {
-    color: #911a37;
+    color: #60175e;
     background-color: white; }
 
 .schedule {
-  background: linear-gradient(#987764, #a98d7c); }
+  background: #AC9281; }
   .schedule .button:hover {
-    color: #ad9282;
+    color: #AC9281;
     background-color: white; }
 
+.schedule-diagonal {
+  fill: #AC9281; }
+
 .policies {
-  background: linear-gradient(#5e1b5e, #7d257d); }
+  background: linear-gradient(to right, #611331, #911A38); }
   .policies .button:hover {
-    color: #852785;
+    color: #611331;
     background-color: white; }
 
 /*
