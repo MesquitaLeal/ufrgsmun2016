@@ -44,24 +44,6 @@ h1 {
 }
 
 /* add sorting icons to gridview sort links */
-a.asc:after, a.desc:after {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    padding-left: 5px;
-}
-
-a.asc:after {
-    content: /*"\e113"*/ "\e151";
-}
-
-a.desc:after {
-    content: /*"\e114"*/ "\e152";
-}
 
 .sort-numerical a.asc:after {
     content: "\e153";
@@ -111,6 +93,9 @@ nav {
     position: relative;
     height: 120px;
     width: 100%;
+    &.index-nav {
+        height: auto;
+    }
 }
 
 .modal-dialog {
@@ -243,9 +228,14 @@ button.close {
     z-index: 1000;
     span {
         display: block;
+        margin-top: 1px;
+        margin-bottom: -1px;
     }
     &:focus {
         outline: none;
+    }
+    &.toogler-index {
+        background-color: rgba($neutra, .4);
     }
 }
 
@@ -389,35 +379,36 @@ HOME
 
 .home {
     background: linear-gradient(to right, $violeta, $vinho);
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    height: 100%;
+}
+
+.home-gradiente {
+    width: 100%;
+    height: 100%;
 }
 
 .moto {
     position: absolute;
-    top: 20%;
-    left: 6%;
+    bottom: 10%;
+    right: 6%;
     font-family: San-Frediano;
     font-size: 1.8rem;
+    text-align: right;
 }
 
 .globo-home {
-    width: 40%;
-    position: absolute;;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 550px;
 }
 
 .home-box {
     position: absolute;
-    top: 50%;
-    right: 3%;
-    transform: translateY(-50%);
-    width: 200px;
+    top: 10%;
+    left: 10%;
+    width: 240px;
     height: 200px
 }
 
@@ -431,6 +422,60 @@ HOME
     font-size: 1.3rem;
     color: $salmao;
     text-align: center;
+}
+
+.home-menu {
+    background: $history;
+    margin-top: 0px;
+    min-height: 450px;
+    position: relative;
+}
+
+.card-box {
+    text-align: center;
+}
+
+.menu-card {
+    width: 220px;
+    height: 250px;
+    background-color: $card;
+    display: inline-block;
+    margin-top: 30px;
+    + .menu-card {
+        margin-left: 40px;
+    }
+    h1 {
+        font-size: 1.5rem;
+        color: $brown;
+        text-align: left;
+        padding: 50px 0 10px 30px;
+    }
+    p {
+        text-align: left;
+        padding: 0 30px 0 30px;
+        color: $neutra;
+        font-family: Hind-Light;
+        font-size: .9rem;
+
+    }
+    .more-button {
+        margin-top: 40px;
+        margin-left: -95px;
+        width: 120px;
+        color: white;
+        &:hover {
+            color: $history;
+            background-color: white;
+        }
+    }
+}
+
+.home-end {
+    background: linear-gradient(to left, #852885, #911a38);
+    .button:hover {
+        color: #911a38;
+        background-color: white;
+    }
 }
 
 /*
@@ -801,6 +846,10 @@ section {
     hyphens: auto;
 }
 
+.apply-title {
+    color: $salmao;
+}
+
 
 /*
 ================================================================================
@@ -818,18 +867,7 @@ MEDIA QUERIES
 }
 
 @media (max-width: 600px) {
-    .home-gradiente {
-        display: none;
-    }
-    .moto {
-        top: 30%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-    }
-    .globo-home {
-        top: 0;
-    }
+
 }
 
 @media (max-width: 33.9em) {
@@ -881,12 +919,6 @@ MEDIA QUERIES
         width: 100px;
     }
 
-    .home-box {
-        left:50%;
-        right: 0;
-        transform: translate(-50%, -50%);
-    }
-
     .person-name {
         padding: 30px;
         width: 100%;
@@ -894,6 +926,15 @@ MEDIA QUERIES
 
     .person-picture {
         display: none;
+    }
+
+    .home-box {
+        top: 7%;
+        width: 150px;
+    }
+
+    .globo-home {
+        width: 300px;
     }
 
 

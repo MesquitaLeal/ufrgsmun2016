@@ -7,18 +7,10 @@ Modal::begin([]);
 Modal::end();
 ?>
 
-<nav>
-    <a href="index.php">
-        <img class="logo-home" src='assets_b/images/logo_horizontal.png' alt="Logo horizontal" />
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#navBar">
+<nav class="index-nav">
+    <button class="navbar-toggler toogler-index" type="button" data-toggle="modal" data-target="#navBar">
         <span>&#9776;</span>
     </button>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M100,0 L25,0 L100,100 L100,0" class="triangle-upperEast" />
-        <!--<image x="0" y="0" width="25" height="50"
-           id="canto" xlink:href=<?=Url::to(['@web/images/mundo_canto.png'])?> />-->
-    </svg>
 </nav>
 
 <div class="modal fade" id="navBar" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
