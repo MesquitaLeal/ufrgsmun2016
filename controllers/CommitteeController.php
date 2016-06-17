@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * CommitteeController implements the CRUD actions for Committee model.
  */
-class CommitteeController extends Controller
+class CommitteeController extends InitController
 {
     /**
      * @inheritdoc

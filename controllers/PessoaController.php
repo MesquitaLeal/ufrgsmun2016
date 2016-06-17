@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * PessoaController implements the CRUD actions for Pessoa model.
  */
-class PessoaController extends Controller
+class PessoaController extends InitController
 {
     /**
      * @inheritdoc

@@ -33,10 +33,16 @@ Modal::end();
                 <div class="modal-footer">
                     <h6>
                         <a href="https://www.facebook.com/ufrgsmun/">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <img class="icon-modal" src="assets_b/images/facebook.png" />
                         </a>
                         <a href="https://www.youtube.com/channel/UCActGk4DnIw7WGO6RJ4wETg">
-                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            <img class="icon-modal" src="assets_b/images/youtube.png" />
+                        </a>
+                        <a href=<?= Url::to(['site/us'])?>>
+                            <img class="icon-modal icon-globe" src="assets_b/images/globo_en.png" />
+                        </a>
+                        <a href=<?= Url::to(['site/pt'])?>>
+                            <img class="icon-modal icon-globe" src="assets_b/images/globo_pt.png" />
                         </a>
                     </h6>
                 </div>

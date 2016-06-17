@@ -11,7 +11,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
-class SiteController extends Controller
+class SiteController extends InitController
 {
 
 
@@ -115,5 +115,19 @@ class SiteController extends Controller
     {
         Yii::$app->view->title = 'UFRGSMUN 2016 - Apply';
         return $this->render('mun');
+    }
+
+    public function actionUs()
+    {
+        $_POST['_lang'] = 'en-US';
+        $this->init();
+        return $this->goHome();
+    }
+
+    public function actionPt()
+    {
+        $_POST['_lang'] = 'pt-BR';
+        $this->init();
+        return $this->goHome();
     }
 }

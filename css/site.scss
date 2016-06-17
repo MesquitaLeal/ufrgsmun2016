@@ -371,6 +371,13 @@ header {
     }
 }
 
+.icon-modal {
+    width: 40px;
+    &.icon-globe {
+        width: 55px;
+    }
+}
+
 /*
 ================================================================================
 HOME
@@ -379,7 +386,7 @@ HOME
 
 .home {
     background: linear-gradient(to right, $violeta, $vinho);
-    height: 100%;
+    height: 110%;
 }
 
 .home-gradiente {
@@ -424,10 +431,14 @@ HOME
     text-align: center;
 }
 
+.diagonal-index {
+    margin-top: -100px;
+}
+
 .home-menu {
     background: $history;
     margin-top: 0px;
-    min-height: 450px;
+    min-height: 500px;
     position: relative;
 }
 
@@ -440,7 +451,7 @@ HOME
     height: 250px;
     background-color: $card;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 50px;
     + .menu-card {
         margin-left: 40px;
     }
@@ -530,6 +541,9 @@ ABOUT
         color: $wine-up;
         background-color: white;
     }
+    .topic-committee {
+        color: $wine-up;
+    }
 }
 
 .what-ufrgsmun {
@@ -537,6 +551,9 @@ ABOUT
     .button:hover {
         color: $salmon-up;
         background-color: white;
+    }
+    .topic-committee {
+        color: $salmon-up;
     }
 }
 
@@ -557,6 +574,9 @@ ABOUT
     .button:hover {
         color: $history;
         background-color: white;
+    }
+    .topic-committee {
+        color: $history;
     }
 }
 
@@ -822,12 +842,12 @@ section {
 .topic-committee,
 .topic-title {
     font-family: Montserrat-Regular;
+    text-transform: uppercase;
 }
 
 .topic-committee {
     font-size: 1.2rem;
     margin-bottom: 0px;
-    text-transform: uppercase;
 }
 
 .topic-title {
