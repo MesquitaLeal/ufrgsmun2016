@@ -17,8 +17,8 @@ $pathDefault = [
 
 <div class="container">
     <header>
-        <h1 class="header-title">committees</h1>
-        <p class="header-subtitle">Below you can see the information about<br/> the committees of UFRGSMUN 2016. </p>
+        <h1 class="header-title"><?= Yii::t('app', 'committees')?></h1>
+        <p class="header-subtitle"><?= Yii::t('app', 'Below you can see the information about<br/> the committees of UFRGSMUN 2016.')?> </p>
         <span class="arrow"></span>
     </header>
 </div>
@@ -39,10 +39,10 @@ $pathDefault = [
             <h2 class="article-title"><?= Yii::t('app', $model->name)?></h2>
             <p class="article-description article-committee"><?= Yii::t('app', $model->description)?></p>
             <?php foreach ($model->topic as $value) :?>
-                <button class="button" type="button" data-toggle="modal" data-target=<?= '#' . $model->abbr . $value->type ?>>Topic <?= Html::encode($value->type) ?></button>
+                <button class="button" type="button" data-toggle="modal" data-target=<?= '#' . $model->abbr . $value->type ?>> <?= Yii::t('app', 'Topic') . ' ' . Html::encode($value->type) ?></button>
                 <?= $this->render('//shared/modal', ['model'=>$model, 'value'=>$value]);?>
             <?php endforeach;?>
-            <button class="button" type="button" data-toggle="modal" data-target=<?= '#staff' . $model->abbr  ?>>STAFF</button>
+            <button class="button" type="button" data-toggle="modal" data-target=<?= '#staff' . $model->abbr  ?>><?= Yii::t('app', 'Staff')?></button>
             <?= $this->render('//shared/modal_staff', ['model'=>$model]);?>
         </article>
     </section>
