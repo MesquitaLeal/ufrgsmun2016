@@ -1,11 +1,11 @@
 <?php
 if (Yii::$app->language == 'en-US') {
     include_once 'about_history_en.php';
-    include_once 'about_projects_en.php';    
+    include_once 'about_projects_en.php';
 }
 else {
     include_once 'about_history_pt.php';
-    include_once 'about_projects_pt.php';       
+    include_once 'about_projects_pt.php';
 }
 
 $sponsors = array (
@@ -206,7 +206,7 @@ $muns = array (
     <article class="container">
         <h2 class="article-title"><?= Yii::t('app', 'Partner Projects')?></h2>
         <p class="article-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            <?= Yii::t('app', 'UFRGSMUN is a partner of other fantastic projects that seek to democratize education by sharing knowledge of the classroom with society. Learn more about them!')?>
         </p>
         <?php foreach ($projects as $key => $value) :?>
             <button class="button button-bigger" type="button" data-toggle="modal" data-target="#<?= $key?>"><?= $key?></button>
@@ -252,7 +252,7 @@ $muns = array (
     <article class="container">
         <h2 class="article-title"><?= Yii::t('app', 'Sponsors and MUNs Partners')?></h2>
         <p class="article-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            <?= Yii::t('app', 'UFRGSMUN does not happen without the support of those who believe in the transforming role of the project. Check here who are our sponsors, supporters and partners models!')?>
         </p>
         <button class="button button-bigger" type="button" data-toggle="modal" data-target="#sponsors"><?= Yii::t('app', 'Sponsors')?></button>
         <div class="modal fade" id="sponsors" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
@@ -302,4 +302,3 @@ $muns = array (
         </div>
     </article>
 </section>
-

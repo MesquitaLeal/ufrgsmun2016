@@ -20,7 +20,7 @@ use yii\helpers\Url;
                         <?php endif?>
                         <h2 class="person-name">
                             <?= Yii::t('app', $value->name)?>
-                            <span><?= ($value->is_director == 1) ? 'Director' : 'Assistant Director'?></span>
+                            <span><?= ($value->is_director == 1) ? Yii::t('app', 'Director') : Yii::t('app', 'Assistant-Director')?></span>
                         </h2>
                         <p class="person-description"><?= Yii::t('app', $value->description)?></p>
                     <?php endforeach ?>

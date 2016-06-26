@@ -30,9 +30,9 @@ $this->title = 'UFRGSMUN 2016';
 <section class="home-menu">
     <article class="container card-box">
         <div class="menu-card">
-            <h1><?= Yii::t('app', 'about us')?></h1>
+            <h1><?= Yii::t('app', 'about')?></h1>
             <p>
-                We have planned a lot of activities, so you can enjoy every minute of UFRGSMUN 2016. Check out our tentative schedule!
+                <?= Yii::t('app', 'Do you want to know more about UFRGSMUN, the edition of this year and the previous ones? Find here also the staff, project partners and supporters!')?>
             </p>
             <a href=<?= Url::to(['site/about'])?>>
                 <button class="button more-button" type="button" name="button"><?= Yii::t('app', 'More')?></button>
@@ -41,7 +41,7 @@ $this->title = 'UFRGSMUN 2016';
         <div class="menu-card">
             <h1><?= Yii::t('app', 'the mun')?></h1>
             <p>
-                We have planned a lot of activities, so you can enjoy every minute of UFRGSMUN 2016. Check out our tentative schedule!
+                <?= Yii::t('app', 'Discover everything you need to know about UFRGSMUN 2016 taking a look at the schedule, event policies and more!')?>
             </p>
             <a href=<?= Url::to(['site/mun'])?>>
                 <button class="button more-button" type="button" name="button"><?= Yii::t('app', 'More')?></button>
@@ -50,7 +50,7 @@ $this->title = 'UFRGSMUN 2016';
         <div class="menu-card">
             <h1><?= Yii::t('app', 'committees')?></h1>
             <p>
-                We have planned a lot of activities, so you can enjoy every minute of UFRGSMUN 2016. Check out our tentative schedule!
+                <?= Yii::t('app', 'Check here committees, topics, representations and staff of this year!')?>
             </p>
             <a href=<?= Url::to(['committee/index'])?>>
                 <button class="button more-button" type="button" name="button"><?= Yii::t('app', 'More')?></button>
@@ -59,7 +59,7 @@ $this->title = 'UFRGSMUN 2016';
         <div class="menu-card">
             <h1><?= Yii::t('app', 'apply')?></h1>
             <p>
-                We have planned a lot of activities, so you can enjoy every minute of UFRGSMUN 2016. Check out our tentative schedule!
+                <?= Yii::t('app', 'apply')?>
             </p>
             <a href=<?= Url::to(['site/apply'])?>>
                 <button class="button more-button" type="button" name="button"><?= Yii::t('app', 'More')?></button>
@@ -80,7 +80,9 @@ $this->title = 'UFRGSMUN 2016';
 <section class="home-end">
     <article class="container">
         <h2 class="article-title">UFRGSMUN 2016</h2>
-        <p class="article-description"><?= Yii::t('app', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum')?></p>
+        <p class="article-description">
+            <?= Yii::t('app', 'This year’s edition seeks to draw our participants to join the process of building a new world that is necessary and possible. A new world through institutions that represent all realities, relationships that respect everyone and, in this sense, that turn the place we live in into an environment more inclusive for different needs and choices. These challenges are only possible to overcome when people hear and are heard by others, making each of us protagonists of the construction of new patterns and structures. This is the invitation that the XIV UFRGSMUN makes to everyone: we will discuss and think together on solutions to overcome the challenges of today\'s world and build a new place where different realities have a voice.')?>
+        </p>
         <button class="button button-bigger" type="button" data-toggle="modal" data-target="#teasers">Teasers</button>
         <div class="modal fade" id="teasers" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
             <div class="modal-dialog" role="document">
