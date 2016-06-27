@@ -16,6 +16,7 @@ $sponsors = array (
     'lemonde.jpg',
     'dacolonia.png',
     'gang.jpg',
+    'salbrasa.jpg',
     'grafica.png',
     'prorext.png',
 );
@@ -109,12 +110,14 @@ $muns = array (
                             <?php foreach($dataProvider->models as $pessoa) :?>
                                 <?php if($pessoa->staff_id <= 3 && !$pessoa->staff_id == NULL) :?>
                                     <?php if (!$pessoa->image == NULL) :?>
-                                        <img class="person-picture" src='assets_b/images/staff/teste.png' alt="Personal picture" />
+                                        <img class="person-picture" src='assets_b/images/staff/secretariado/<?= $pessoa->image;?>.png' alt="Personal picture" />
                                     <?php endif?>
-                                    <h2 class="person-name">
-                                        <?= $pessoa->name ?>
-                                        <span><?= Yii::t('app', $pessoa->staff->role) ?></span>
-                                    </h2>
+                                    <div class="person-nameBox">
+                                        <h2 class="person-name">
+                                            <?= $pessoa->name ?>
+                                            <span><?= Yii::t('app', $pessoa->staff->role) ?></span>
+                                        </h2>
+                                    </div>
                                     <p class="person-description"><?= Yii::t('app', $pessoa->description)?></p>
                                 <?php endif ?>
                             <?php endforeach ?>
@@ -136,14 +139,16 @@ $muns = array (
                             <h2 class="topic-committee"><?= Yii::t('app', 'Administrative')?></h2>
                             <h3 class="topic-title"><?= Yii::t('app', 'MEET THE STAFF')?></h3>
                             <?php foreach($dataProvider->models as $pessoa) :?>
-                                <?php if($pessoa->staff_id >= 4 && !$pessoa->staff_id == NULL) :?>
+                                    <?php if($pessoa->staff_id >= 4 && !$pessoa->staff_id == NULL) :?>
                                     <?php if (!$pessoa->image == NULL) :?>
-                                        <img class="person-picture" src='assets_b/images/staff/teste.png' alt="Personal picture" />
+                                        <img class="person-picture" src='assets_b/images/staff/administrativo/<?= $pessoa->image;?>.png' alt="Personal picture" />
                                     <?php endif?>
-                                    <h2 class="person-name">
-                                        <?= Yii::t('app', $pessoa->name)?>
-                                        <span><?= Yii::t('app', $pessoa->staff->role) ?></span>
-                                    </h2>
+                                    <div class="person-nameBox">
+                                        <h2 class="person-name">
+                                            <?= Yii::t('app', $pessoa->name)?>
+                                            <span><?= Yii::t('app', $pessoa->staff->role) ?></span>
+                                        </h2>
+                                    </div>
                                     <p class="person-description"><?= Yii::t('app', $pessoa->description)?></p>
                                 <?php endif ?>
                             <?php endforeach ?>

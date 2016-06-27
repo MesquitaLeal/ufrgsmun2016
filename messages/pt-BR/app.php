@@ -46,7 +46,7 @@ return [
 	'Events'												=> 'Eventos',
 	'Fund-Raising' 											=> 'Captação de recursos',
     'Director'                                              => 'Diretor',
-    'Assistant-Director'                                    => 'Diretor Assistente',
+    'Assistant-Director'                                    => 'Assistente-Diretor',
 
     //the mun
     'Location' => 'Localização',

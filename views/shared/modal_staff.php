@@ -16,12 +16,14 @@ use yii\helpers\Url;
                     <h3 class="topic-title">MEET THE STAFF</h3>
                     <?php foreach ($model->pessoa as $value) :?>
                         <?php if (!$value->image == NULL) :?>
-                            <img class="person-picture" src='assets_b/images/staff/teste.png' alt="Personal picture" />
+                            <img class="person-picture" src='assets_b/images/staff/<?= $model->abbr;?>/<?= $value->image ; ?>.png' alt="Personal picture" />
                         <?php endif?>
-                        <h2 class="person-name">
-                            <?= Yii::t('app', $value->name)?>
-                            <span><?= ($value->is_director == 1) ? Yii::t('app', 'Director') : Yii::t('app', 'Assistant-Director')?></span>
-                        </h2>
+                        <div class="person-nameBox">
+                            <h2 class="person-name">
+                                <?= Yii::t('app', $value->name)?>
+                                <span><?= ($value->is_director == 1) ? Yii::t('app', 'Director') : Yii::t('app', 'Assistant-Director')?></span>
+                            </h2>
+                        </div>
                         <p class="person-description"><?= Yii::t('app', $value->description)?></p>
                     <?php endforeach ?>
                 </div>
