@@ -10,8 +10,60 @@ use yii\base\View;
 $this->title = Yii::t('app', 'Committees');
 
 $pathDefault = [
-    'upper' => 'M0,0 L100,0 L0,100 L0,0',
-    'lower' => 'M100,0 L0,100 L100,100 L100,0',
+    'asean' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#d09014',
+        'color2'=> '#d99715'
+    ],
+    'wb' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#000000',
+        'color2'=> '#444444'
+    ],
+    'disec' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#000000',
+        'color2'=> '#444444'
+    ],
+    'icj' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#000000',
+        'color2'=> '#444444'
+    ],
+    'ip' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#000000',
+        'color2'=> '#444444'
+    ],
+    'oea' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#000000',
+        'color2'=> '#444444'
+    ],
+    'au' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#000000',
+        'color2'=> '#444444'
+    ],
+    'unea' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#000000',
+        'color2'=> '#444444'
+    ],
+    'unsc' => [
+        'upper' => 'M0,0 L100,0 L0,100 L0,0',
+        'lower' => 'M100,0 L0,100 L100,100 L100,0',
+        'color1'=> '#000000',
+        'color2'=> '#444444'
+    ],
 ];
 ?>
 
@@ -33,7 +85,7 @@ $pathDefault = [
 </svg>
 
 <?php foreach ($dataProvider->models as $model):?>
-    <?= $this->render('//shared/svg', ['path'=>$pathDefault, 'model'=>$model]);?>
+    <?= $this->render('//shared/svg', ['path'=>$pathDefault[$model->abbr], 'model'=>$model]);?>
     <section class=<?= Html::encode($model->abbr)?>>
         <article class="container">
             <h2 class="article-title"><?= Yii::t('app', $model->name)?></h2>
