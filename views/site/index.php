@@ -30,7 +30,7 @@ $this->title = 'UFRGSMUN 2016';
 <section class="home-menu">
     <article class="container card-box">
         <div class="menu-card">
-            <h1><?= Yii::t('app', 'about')?></h1>
+            <h1><?= Yii::t('app', 'about us')?></h1>
             <p>
                 <?= Yii::t('app', 'Do you want to know more about UFRGSMUN, the edition of this year and the previous ones? Find here also the staff, project partners and supporters!')?>
             </p>

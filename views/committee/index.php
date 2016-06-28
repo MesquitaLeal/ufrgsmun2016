@@ -13,56 +13,74 @@ $pathDefault = [
     'asean' => [
         'upper' => 'M0,0 L100,0 L0,100 L0,0',
         'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#d09014',
-        'color2'=> '#d99715'
+        'upper-colorBegins'=> '#e9d6c5',
+        'upper-colorEnds'=> '#e9d6c5',
+        'lower-colorBegins'=> '#d09014',
+        'lower-colorEnds'=> '#d99715'
     ],
     'wb' => [
         'upper' => 'M0,0 L100,0 L0,100 L0,0',
         'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#000000',
-        'color2'=> '#444444'
+        'upper-colorBegins'=> '#eeb952',
+        'upper-colorEnds'=> '#efbd5b',
+        'lower-colorBegins'=> '#0c5d51',
+        'lower-colorEnds'=> '#0d6659'
     ],
     'disec' => [
-        'upper' => 'M0,0 L100,0 L0,100 L0,0',
-        'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#000000',
-        'color2'=> '#444444'
+        'upper' => 'M0,0 L100,0 L100,100 L0,0',
+        'lower' => 'M0,0 L100,100 L0,100 L0,0',
+        'upper-colorBegins'=> '#17ae98',
+        'upper-colorEnds'=> '#18b7a0',
+        'lower-colorBegins'=> '#502f2e',
+        'lower-colorEnds'=> '#573332'
     ],
     'icj' => [
         'upper' => 'M0,0 L100,0 L0,100 L0,0',
         'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#000000',
-        'color2'=> '#444444'
+        'upper-colorBegins'=> '#8b514f',
+        'upper-colorEnds'=> '#915553',
+        'lower-colorBegins'=> '#770c19',
+        'lower-colorEnds'=> '#800d1b'
     ],
     'ip' => [
         'upper' => 'M0,0 L100,0 L0,100 L0,0',
         'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#000000',
-        'color2'=> '#444444'
+        'upper-colorBegins'=> '#ca152b',
+        'upper-colorEnds'=> '#d3162d',
+        'lower-colorBegins'=> '#a3440d',
+        'lower-colorEnds'=> '#ad470e'
     ],
     'oea' => [
-        'upper' => 'M0,0 L100,0 L0,100 L0,0',
-        'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#000000',
-        'color2'=> '#444444'
+        'upper' => 'M0,0 L100,0 L100,100 L0,0',
+        'lower' => 'M0,0 L100,100 L0,100 L0,0',
+        'upper-colorBegins'=> '#ed6a1f',
+        'upper-colorEnds'=> '#ee7028',
+        'lower-colorBegins'=> '#622b5a',
+        'lower-colorEnds'=> '#692e60'
     ],
     'au' => [
         'upper' => 'M0,0 L100,0 L0,100 L0,0',
         'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#000000',
-        'color2'=> '#444444'
+        'upper-colorBegins'=> '#a24794',
+        'upper-colorEnds'=> '#a94a9b',
+        'lower-colorBegins'=> '#27692b',
+        'lower-colorEnds'=> '#29712e'
     ],
     'unea' => [
         'upper' => 'M0,0 L100,0 L0,100 L0,0',
         'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#000000',
-        'color2'=> '#444444'
+        'upper-colorBegins'=> '#3fad46',
+        'upper-colorEnds'=> '#42b449',
+        'lower-colorBegins'=> '#6b7423',
+        'lower-colorEnds'=> '#737c25'
     ],
     'unsc' => [
-        'upper' => 'M0,0 L100,0 L0,100 L0,0',
-        'lower' => 'M100,0 L0,100 L100,100 L100,0',
-        'color1'=> '#000000',
-        'color2'=> '#444444'
+        'upper' => 'M0,0 L100,0 L100,100 L0,0',
+        'lower' => 'M0,0 L100,100 L0,100 L0,0',
+        'upper-colorBegins'=> '#adbb38',
+        'upper-colorEnds'=> '#b4c33a',
+        'lower-colorBegins'=> '#2b4d6c',
+        'lower-colorEnds'=> '#2e5273'
     ],
 ];
 ?>
@@ -74,15 +92,6 @@ $pathDefault = [
         <span class="arrow"></span>
     </header>
 </div>
-
-<svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <path d="M0,0 L100,0 L0,100 L0,0" class="diagonal-brown" />
-    <path d="M100,0 L0,100 L100,100 L100,0" class="diagonal-asean-high" />
-    <linearGradient id="gradient-asean-high" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#d09014" />
-          <stop offset="100%" stop-color="#d99715" />
-    </linearGradient>
-</svg>
 
 <?php foreach ($dataProvider->models as $model):?>
     <?= $this->render('//shared/svg', ['path'=>$pathDefault[$model->abbr], 'model'=>$model]);?>

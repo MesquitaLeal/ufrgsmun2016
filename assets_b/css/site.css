@@ -29,6 +29,16 @@ body {
   font-size: 16px;
   background-color: #e9d6c5; }
 
+body::-webkit-scrollbar {
+  width: 5px; }
+
+body::-webkit-scrollbar-track {
+  background-color: #a29a9d; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #8a7f83;
+  outline: 1px solid slategrey; }
+
 h1 {
   font-family: Montserrat-Regular; }
 
@@ -99,6 +109,24 @@ nav {
   nav.index-nav {
     height: auto; }
 
+.menu-link:hover {
+  text-decoration: none; }
+
+.menu-link h1 {
+  transition: color .3s ease; }
+
+.menu-link:nth-of-type(1) h1:hover {
+  color: #B02739; }
+
+.menu-link:nth-of-type(2) h1:hover {
+  color: #822c81; }
+
+.menu-link:nth-of-type(3) h1:hover {
+  color: #554e51; }
+
+.menu-link:nth-of-type(4) h1:hover {
+  color: #f26f51; }
+
 .modal-dialog {
   position: absolute;
   right: 0px;
@@ -140,7 +168,8 @@ nav {
 .modal-footer {
   position: absolute;
   right: 0;
-  border: none; }
+  border: none;
+  padding-right: 10px; }
 
 .modal-header {
   top: 0px; }
@@ -165,6 +194,8 @@ nav {
     color: #8a7f83; }
   .modal-body.modal-delimiter {
     width: 60%; }
+  .modal-body::-webkit-scrollbar {
+    display: none; }
 
 .modal-menu {
   position: absolute;
@@ -542,12 +573,16 @@ THE MUN
   .location .button:hover {
     color: #60175e;
     background-color: white; }
+  .location .topic-committee {
+    color: #60175e; }
 
 .schedule {
   background: #AC9281; }
   .schedule .button:hover {
     color: #AC9281;
     background-color: white; }
+  .schedule .topic-committee {
+    color: #AC9281; }
 
 .schedule-diagonal {
   fill: #AC9281; }
@@ -557,6 +592,22 @@ THE MUN
   .policies .button:hover {
     color: #611331;
     background-color: white; }
+
+.schedule .topic-committee,
+.policies .topic-committee {
+  color: #611331; }
+
+.schedule .topic-title,
+.policies .topic-title {
+  margin-bottom: 5px; }
+
+.schedule .topic-title:not(:first-of-type),
+.policies .topic-title:not(:first-of-type) {
+  margin-top: 40px; }
+
+.schedule .topic-title:first-of-type,
+.policies .topic-title:first-of-type {
+  margin-top: 10px; }
 
 /*
 ================================================================================

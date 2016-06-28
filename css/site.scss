@@ -9,6 +9,19 @@ body {
     background-color: #e9d6c5;
 }
 
+body {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: lighten($brown, 10%);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $brown;
+        outline: 1px solid slategrey;
+    }
+}
+
 h1 {
     font-family: Montserrat-Regular;
 }
@@ -98,6 +111,27 @@ nav {
     }
 }
 
+.menu-link {
+    &:hover {
+        text-decoration: none;
+    }
+    h1 {
+        transition: color .3s ease;
+    }
+    &:nth-of-type(1) h1:hover {
+        color: $about;
+    }
+    &:nth-of-type(2) h1:hover {
+        color: $mun;
+    }
+    &:nth-of-type(3) h1:hover {
+        color: darken($brown, 20%);
+    }
+    &:nth-of-type(4) h1:hover {
+        color: $salmao;
+    }
+}
+
 .modal-dialog {
     position: absolute;
     right: 0px;
@@ -145,6 +179,7 @@ nav {
     position: absolute;
     right: 0;
     border: none;
+    padding-right: 10px;
 }
 
 .modal-header {
@@ -176,6 +211,9 @@ nav {
     }
     &.modal-delimiter {
         width: 60%;
+    }
+    &::-webkit-scrollbar {
+        display: none;
     }
 }
 
@@ -639,6 +677,9 @@ THE MUN
         color: $purple-up;
         background-color: white;
     }
+    .topic-committee {
+        color: $purple-up;
+    }
 }
 
 .schedule {
@@ -646,6 +687,9 @@ THE MUN
     .button:hover {
         color: $light-brown;
         background-color: white;
+    }
+    .topic-committee {
+        color: $light-brown;
     }
 }
 
@@ -658,6 +702,22 @@ THE MUN
     .button:hover {
         color: $dark-wine;
         background-color: white;
+    }
+}
+
+.schedule,
+.policies {
+    .topic-committee {
+        color: $dark-wine;
+    }
+    .topic-title {
+        margin-bottom:5px;
+    }
+    .topic-title:not(:first-of-type) {
+        margin-top: 40px;
+    }
+    .topic-title:first-of-type {
+        margin-top: 10px;
     }
 }
 
