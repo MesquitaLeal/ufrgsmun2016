@@ -53,6 +53,7 @@ $muns = array (
         <p class="article-description">
             <?= Yii::t('app', 'Model United Nations is an event which gives the opportunity for students to debate relevant issues of the international agenda through an authentic simulation of the discussions taking place at the UN. They simulate, in a very realistic manner, the proceedings and debates of different UN organs, such as the Security Council, the General Assembly, and the Economic and Social Council. During the simulations, the students act as "delegates" representing one specific country. By acting as ambassadors of that Member State, participants support their positions and uphold their interests during the discussions. People also have the opportunity to participate as judges in the juridic committees and as journalists from the international media covering the debates.')?>
         </p>
+        <img class="img-responsive mun-logo" src="assets_b/images/mun_logo.png" alt="" />
     </article>
 </section>
 

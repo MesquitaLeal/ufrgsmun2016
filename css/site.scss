@@ -443,18 +443,23 @@ HOME
 }
 
 .card-box {
-    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .menu-card {
     width: 220px;
-    height: 250px;
+    height: 270px;
     background-color: $card;
-    display: inline-block;
-    margin-top: 50px;
-    + .menu-card {
-        margin-left: 40px;
-    }
+    margin-top: 30px;
+    margin-right: 20px;
+    position: relative;
     h1 {
         font-size: 1.5rem;
         color: $brown;
@@ -467,17 +472,18 @@ HOME
         color: $neutra;
         font-family: Hind-Light;
         font-size: .9rem;
-
     }
-    .more-button {
-        margin-top: 40px;
-        margin-left: -95px;
-        width: 120px;
-        color: white;
-        &:hover {
-            color: $history;
-            background-color: white;
-        }
+}
+
+.more-button {
+    position: absolute;
+    top: 290px;
+    left:0;
+    width: 120px;
+    color: white;
+    &:hover {
+        color: $history;
+        background-color: white;
     }
 }
 
@@ -552,6 +558,11 @@ ABOUT
     }
     .topic-committee {
         color: $wine-up;
+    }
+    .mun-logo {
+        max-width: 400px;
+        float: right;
+        margin-top: -330px;
     }
 }
 
@@ -885,6 +896,29 @@ section {
 MEDIA QUERIES
 ================================================================================
 */
+
+@media(min-width:767px)and(max-width:1199px) {
+    .menu-card {
+        margin-left: 50px;
+    }
+    .menu-card:nth-of-type(3),
+    .menu-card:nth-of-type(4) {
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+    .mun-logo {
+        display: none;
+    }
+}
+
+@media(max-width:766px) {
+    .menu-card {
+        margin-bottom: 100px;
+    }
+    .mun-logo {
+        display: none;
+    }
+}
 
 @media (max-width: 74.9em) {
     .moto {

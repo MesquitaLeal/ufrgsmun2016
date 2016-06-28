@@ -59,7 +59,7 @@ $this->title = 'UFRGSMUN 2016';
         <div class="menu-card">
             <h1><?= Yii::t('app', 'apply')?></h1>
             <p>
-                <?= Yii::t('app', 'apply')?>
+                <?= Yii::t('app', 'Click here to guarantee your vacancy in UFRGSMUN 2016!')?>
             </p>
             <a href=<?= Url::to(['site/apply'])?>>
                 <button class="button more-button" type="button" name="button"><?= Yii::t('app', 'More')?></button>
@@ -83,7 +83,7 @@ $this->title = 'UFRGSMUN 2016';
         <p class="article-description">
             <?= Yii::t('app', 'This year’s edition seeks to draw our participants to join the process of building a new world that is necessary and possible. A new world through institutions that represent all realities, relationships that respect everyone and, in this sense, that turn the place we live in into an environment more inclusive for different needs and choices. These challenges are only possible to overcome when people hear and are heard by others, making each of us protagonists of the construction of new patterns and structures. This is the invitation that the XIV UFRGSMUN makes to everyone: we will discuss and think together on solutions to overcome the challenges of today\'s world and build a new place where different realities have a voice.')?>
         </p>
-        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#teasers">Teasers</button>
+        <button class="button" type="button" data-toggle="modal" data-target="#teasers">Teasers</button>
         <div class="modal fade" id="teasers" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -97,6 +97,8 @@ $this->title = 'UFRGSMUN 2016';
                             <h2 class="topic-committee">UFRGSMUN 2016</h2>
                             <h3 class="topic-title">SEE OUR TEASERS</h3>
                             <iframe width="100%" height="315" src="https://www.youtube.com/embed/10kcAKffHt0" frameborder="0" allowfullscreen></iframe>
+                            <br><br>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Fq45O5LPrpg" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>

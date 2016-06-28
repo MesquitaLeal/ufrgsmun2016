@@ -131,7 +131,7 @@
     <br/><article class="container">
         <h2 class="article-title"><?= Yii::t('app', 'General Policies')?></h2>
         <!--<p class="article-description">Do you want to know the number of representatives a delegation can have? Or how do you get the certificate of participation after the end of the event? Maybe you are in doubt about the dress code... Well, the answer to these questions and many others are in our general policies. Take a look!</p>-->
-        <p class="article-description"><?= Yii::t('app', 'Every UFRGSMUN participant ought to read these policies in their entirety and abide to them during the conference. Delegates are also expected to abide by all local laws and venue-specific regulations while at UFRGSMUN 2015.')?></p>
+        <p class="article-description"><?= Yii::t('app', 'Every UFRGSMUN participant ought to read these policies in their entirety and abide to them during the conference. Delegates are also expected to abide by all local laws and venue-specific regulations while at UFRGSMUN 2016.')?></p>
         <button class="button" type="button" data-toggle="modal" data-target="#modal-policies"><?= Yii::t('app', 'Policies')?></button>
         <div class="modal fade" id="modal-policies" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
             <div class="modal-dialog" role="document">

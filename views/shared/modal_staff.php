@@ -13,7 +13,7 @@ use yii\helpers\Url;
                 </div>
                 <div class="modal-body modal-delimiter">
                     <h2 class="topic-committee"><?= Yii::t('app', $model->abbr)?></h2>
-                    <h3 class="topic-title">MEET THE STAFF</h3>
+                    <h3 class="topic-title"><?= Yii::t('app', 'MEET THE STAFF')?></h3>
                     <?php foreach ($model->pessoa as $value) :?>
                         <?php if (!$value->image == NULL) :?>
                             <img class="person-picture" src='assets_b/images/staff/<?= $model->abbr;?>/<?= $value->image ; ?>.png' alt="Personal picture" />
