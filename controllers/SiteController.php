@@ -105,15 +105,9 @@ class SiteController extends InitController
         return $this->render('about', ['dataProvider'=>$dataProvider]);
     }
 
-    public function actionApply()
-    {
-        Yii::$app->view->title = 'UFRGSMUN 2016 - Apply';
-        return $this->render('apply');
-    }
-
     public function actionMun()
     {
-        Yii::$app->view->title = 'UFRGSMUN 2016 - Apply';
+        Yii::$app->view->title = 'UFRGSMUN 2016 - MUN';
         return $this->render('mun');
     }
 

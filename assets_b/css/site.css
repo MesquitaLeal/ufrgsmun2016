@@ -327,6 +327,12 @@ header {
 .button-bigger {
   width: 200px; }
 
+.button-smaller {
+  width: 60px; }
+
+.button-link {
+  color: white; }
+
 .modal-title {
   font-family: Montserrat-Regular;
   font-size: 2rem;
@@ -456,6 +462,8 @@ HOME
   .home-end .button:hover {
     color: #911a38;
     background-color: white; }
+  .home-end .topic-committee {
+    color: #911a38; }
 
 /*
 ================================================================================
@@ -503,24 +511,34 @@ ABOUT
 .about-title {
   color: #B02739; }
 
-.what-mun {
+.what-mun,
+.form-icj {
   background: linear-gradient(to right, #911A38, #B41F34); }
-  .what-mun .button:hover {
+  .what-mun .button:hover,
+  .form-icj .button:hover {
     color: #911A38;
     background-color: white; }
-  .what-mun .topic-committee {
+  .what-mun .topic-committee,
+  .form-icj .topic-committee {
     color: #911A38; }
-  .what-mun .mun-logo {
+  .what-mun .mun-logo,
+  .form-icj .mun-logo {
     max-width: 400px;
     float: right;
     margin-top: -330px; }
 
-.what-ufrgsmun {
+.what-ufrgsmun,
+.register,
+.form-b {
   background: linear-gradient(to right, #DF4C4C, #F26F52); }
-  .what-ufrgsmun .button:hover {
+  .what-ufrgsmun .button:hover,
+  .register .button:hover,
+  .form-b .button:hover {
     color: #DF4C4C;
     background-color: white; }
-  .what-ufrgsmun .topic-committee {
+  .what-ufrgsmun .topic-committee,
+  .register .topic-committee,
+  .form-b .topic-committee {
     color: #DF4C4C; }
 
 .meet-us {
@@ -528,6 +546,8 @@ ABOUT
   .meet-us .button:hover {
     color: #AC9281;
     background-color: white; }
+  .meet-us .topic-committee {
+    color: #AC9281; }
 
 .meet-us-diagonal {
   fill: #AC9281; }
@@ -550,7 +570,13 @@ ABOUT
   position: relative;
   margin-bottom: 10px;
   margin-right: 10px;
-  display: inline-block; }
+  display: inline-block;
+  transition: border .2s ease; }
+  .square:hover {
+    border: 5px solid #DF4C4C; }
+
+.sponsor-link:hover {
+  text-decoration: none; }
 
 .sponsor-img {
   position: absolute;
@@ -576,12 +602,21 @@ THE MUN
   .location .topic-committee {
     color: #60175e; }
 
-.schedule {
+.schedule,
+.un4mun,
+.form-a,
+.form-ip {
   background: #AC9281; }
-  .schedule .button:hover {
+  .schedule .button:hover,
+  .un4mun .button:hover,
+  .form-a .button:hover,
+  .form-ip .button:hover {
     color: #AC9281;
     background-color: white; }
-  .schedule .topic-committee {
+  .schedule .topic-committee,
+  .un4mun .topic-committee,
+  .form-a .topic-committee,
+  .form-ip .topic-committee {
     color: #AC9281; }
 
 .schedule-diagonal {
@@ -769,6 +804,11 @@ section {
 .topic-title {
   font-size: 1.4rem;
   margin-bottom: 30px; }
+
+.topic-item {
+  font-family: Montserrat-Regular;
+  font-size: 1.2rem;
+  margin-top: 30px; }
 
 .topic-references {
   font-size: 0.8rem;

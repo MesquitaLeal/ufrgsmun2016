@@ -8,25 +8,7 @@ else {
     include_once 'about_projects_pt.php';
 }
 
-$sponsors = array (
-    'audiplo.png',
-    'cafe.png',
-    'ceri.jpg',
-    'fce.png',
-    'lemonde.jpg',
-    'dacolonia.png',
-    'gang.jpg',
-    'salbrasa.jpg',
-    'grafica.png',
-    'prorext.png',
-);
-
-$muns = array (
-    'amun.png',
-    'famun.jpg',
-    'temas.png',
-    'pampasul.png',
-);
+include_once 'about_sponsors.php';
 
 ?>
 
@@ -274,9 +256,36 @@ $muns = array (
                             <h2 class="topic-committee"><?= Yii::t('app', 'Sponsors and MUNs Partners')?></h2>
                             <h3 class="topic-title"><?= Yii::t('app', 'Sponsors')?></h3>
                             <?php foreach($sponsors as $sponsor) :?>
-                                <div class='square'>
-                                    <img class="sponsor-img" src="assets_b/images/sponsors/<?= $sponsor?>">
-                                </div>
+                                <a class='sponsor-link' href="<?= $sponsor['link']?>">
+                                    <div class='square'>
+                                        <img class="sponsor-img" src="assets_b/images/sponsors/<?= $sponsor['image']?>">
+                                    </div>
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#support"><?= Yii::t('app', 'Support')?></button>
+        <div class="modal fade" id="support" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h2 class="topic-committee"><?= Yii::t('app', 'Sponsors and MUNs Partners')?></h2>
+                            <h3 class="topic-title"><?= Yii::t('app', 'Support')?></h3>
+                            <?php foreach($supporters as $support) :?>
+                                <a class='sponsor-link' href="<?= $support['link']?>">
+                                    <div class='square'>
+                                        <img class="sponsor-img" src="assets_b/images/sponsors/<?= $support['image']?>">
+                                    </div>
+                                </a>
                             <?php endforeach; ?>
                         </div>
                     </div>
@@ -297,9 +306,11 @@ $muns = array (
                             <h2 class="topic-committee"><?= Yii::t('app', 'Sponsors and MUNs Partners')?></h2>
                             <h3 class="topic-title"><?= Yii::t('app', 'MUNs Partners')?></h3>
                             <?php foreach($muns as $mun) :?>
-                                <div class='square'>
-                                    <img class="sponsor-img" src="assets_b/images/muns/<?= $mun?>">
-                                </div>
+                                <a class='sponsor-link' href="<?= $mun['link']?>">
+                                    <div class='square'>
+                                        <img class="sponsor-img" src="assets_b/images/muns/<?= $mun['image']?>">
+                                    </div>
+                                </a>
                             <?php endforeach; ?>
                         </div>
                     </div>

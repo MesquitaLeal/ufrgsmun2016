@@ -5,15 +5,17 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "committees".
+ * This is the model class for table "committee".
  *
  * @property integer $id
  * @property string $abbr
  * @property string $name
  * @property string $description
  *
- * @property Pessoas[] $pessoas
- * @property Topics[] $topics
+ * @property CommitteeCountry[] $committeeCountries
+ * @property Country[] $countries
+ * @property Pessoa[] $pessoas
+ * @property Topic[] $topics
  */
 class Committee extends \yii\db\ActiveRecord
 {
@@ -49,6 +51,22 @@ class Committee extends \yii\db\ActiveRecord
             'name' => Yii::t('app', 'Name'),
             'description' => Yii::t('app', 'Description'),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCommitteeCountries()
+    {
+        return $this->hasMany(CommitteeCountry::className(), ['committee_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCountries()
+    {
+        return $this->hasMany(Country::className(), ['id' => 'country_id'])->viaTable('committee_country', ['committee_id' => 'id']);
     }
 
     /**

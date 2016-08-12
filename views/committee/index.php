@@ -7,8 +7,6 @@ use yii\base\View;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Committees');
-
 $pathDefault = [
     'asean' => [
         'upper' => 'M0,0 L100,0 L0,100 L0,0',

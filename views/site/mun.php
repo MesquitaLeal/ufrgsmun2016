@@ -171,7 +171,7 @@
                             </p>
                             <h3 class="topic-title"><?= Yii::t('app', 'Delegate fee')?></h3>
                             <p class="modal-text">
-                                <?= Yii::t('app', 'A fee per person of R$ 140 in full amount or R$ 150 divided in two installments applies in order to participate in the conference. Head delegates will have the chance to choose in the registration form whether their delegations will pay their corresponding delegate fees in two installments or in full amount. The payment method chosen necessarily applies to all members of your delegation. Head delegates are responsible for gathering the money of their delegations and sending the payment to UFRGSMUN.')?>
+                                <?= Yii::t('app', 'A fee per person of R$ 140 in full amount or R$ 160 divided in two installments applies in order to participate in the conference. Head delegates will have the chance to choose in the registration form whether their delegations will pay their corresponding delegate fees in two installments or in full amount. The payment method chosen necessarily applies to all members of your delegation. Head delegates are responsible for gathering the money of their delegations and sending the payment to UFRGSMUN.')?>
                             </p>
                             <p class="modal-text">
                                 <?= Yii::t('app', 'UFRGSMUN grants exemption of registration fee for those who fit the established requirements. The head delegate must aware the Secretariat if there is anyone in the delegation that is beneficiary during the fill of Form B.')?>
@@ -272,5 +272,207 @@
                 </div>
             </div>
         </div>
+    </article>
+</section>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,0 L100,0 L0,100 L0,0" style="fill: url(#gradient-policies-low)" />
+    <path d="M100,0 L0,100 L100,100 L100,0" class="schedule-diagonal"/>
+    <linearGradient id="gradient-policies-low" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#611331" />
+          <stop offset="100%" stop-color="#911a38" />
+    </linearGradient>
+</svg>
+
+<section class="un4mun right-position">
+    <article class="container">
+        <h2 class="article-title">UN4MUN</h2>
+        <p class="article-description">
+            <?= Yii::t('app', 'We bring something new to the simulation this year: the application of UN4MUN rules together with other models in Brazil. Do you know what is UN4MUN and what will change this year?')?>
+        </p>
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#un4mun-what"><?= Yii::t('app', 'What is it?')?></button>
+        <div class="modal fade" id="un4mun-what" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap"<br/>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <br/><span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h2 class="topic-committee">UN4MUN</h2>
+                            <h3 class="topic-title"><?= Yii::t('app', 'What is it?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'UN4MUN is a platform developed by the United Nations Department for Public Information (UNDPI) to provide a more accurate simulation of the United Nations organs, as well as a further understanding of its decision making process—as it follows the authentic procedure of UN General Assembly and UN Security Council. The project managed 3 global MUN conferences, in 2009, 2010 and 2011. Since then, the UNDPI began to spread this knowledge through a workshop for students and people involved in MUNs—participating or organizing—in general. The aim of these events is to “examine how Model UN simulations can more accurately capture the negotiation process as it commonly occurs at the UN” (UN4MUN 2015, online), turning traditional MUNs around the globe closer to the negotiations that happen in reality. In order to achieve this, the workshops promote “a basic understanding of the Rules of Procedure used by the General Assembly and Security Council, how decisions are made in these two Organs of the UN, what you need to know when drafting resolutions, the duties and responsibilities of the UN Secretariat, General Assembly and Security Council officials, the negotiation process that takes place during informal meetings, how consensus is achieved, how to chair meetings, the differences between UN4MUN and other MUN programmes and more”.')?>
+                            </p>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'The last edition of the workshop occured in New York from 6 to 9 November, 2015. Even more MUNers took part in this edition—including Brazilian MUN organizers. Representing UFRGSMUN was Júlia Rosa, Secretary General of UFRGSMUN 2015, which transferred the knowledge she gained to the Secretariat of this year’s edition. In February, representatives of 8 MUNs of Brazil gathered at FACAMP (Faculdades de Campinas) to discuss the adoption of the new procedures learned in UN4MUN workshop. It was proposed the gradual adoption of the same general rules and new practices (more specifically in 3 years), which was called the “Campinas Agreement”.')?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#un4mun-consensus"><?= Yii::t('app', 'Consensus')?></button>
+        <div class="modal fade" id="un4mun-consensus" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap"<br/>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <br/><span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h2 class="topic-committee">UN4MUN</h2>
+                            <h3 class="topic-title"><?= Yii::t('app', 'Consensus')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'One of the most important aspects of the procedures in real negotiations is the consensus. According to Ronald Walker in its Manual for UN Delegates (2011), consensus is the most widely-used and universally-preferred mode of decision-making. Reaching a consensus means that the final decision was taken with no need of a voting process, because the negotiators agree on a certain proposal. Originally, in the UN, all decisions were made by voting. Since this practice caused dissatisfaction among developing countries (which had a lesser influence in the votings), this context changed and nowadays there is a strong preference inside the UN system for taking decisions by consensus. Even political bodies outside the UN system also adopt this preference.')?>
+                            </p>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'This does not mean, nevertheless, that consensus is mandatory. It may happen that there is an inability to reach consensus in a negotiation where positions are too far apart, or even when delegates do not manage to develop proposals on which consensus would be possible. This is one of the main reasons why conferences sometimes proceed to voting. However, as previously stated, consensus is a preferred mode of reaching a final decision, and building a consensus culture is one of the challenges the traditional MUNs have to face in order to get closer to reality, enhancing cooperation to reach solutions instead of inflexible discussions; a culture that certainly will also have impacts outside the simulation world as well.')?>
+                            </p>
+                            <h4 class="topic-item"><?= Yii::t('app', 'Why is seeking consensus important?')?></h4>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'When the goal is to find a solution that can count with the support of all parts involved, there is a bigger effort in reaching a common ground. This fact leads to more group work and less individual positions, which foments cooperation between the ones taking part in the decision-making and makes the solutions adopted more effective. In the UN, consensus is not agreeing with which and every word of the document of the final decision; it is rather the collective decision of approving something in group that does not go against the foreign policy of the countries represented. Moreover, reaching consensus is of utmost importance in the case of committees that do not have a mandatory character (e.g. UN General Assembly). In this cases, if all the delegations reach a consensus, the chances of putting the recommendations into practice at national levels are greater.')?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="button button-bigger" type="button" data-toggle="modal" data-target="#un4mun-rules"><?= Yii::t('app', 'Rules')?></button>
+        <div class="modal fade" id="un4mun-rules" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap"<br/>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <br/><span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h2 class="topic-committee">UN4MUN</h2>
+                            <h3 class="topic-title"><?= Yii::t('app', 'Rules of procedure')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'As previously stated, some of the procedures generally adopted by many MUNs in Brazil will change according to what was learned in the last workshop promoted by UN4MUN. But why is this change important? The main reasons are: to get simulations closer to UN procedures (bearing in mind that this does not mean making MUNs look exactly like real negotiations—there are some crucial and obvious differences between them); to further understand the process of decision-making, granting a knowledge that can be better used in the future and; to easen the flow of the debate, since real discussions in the UN do not have all the motions, points and interruptions the traditional Models UN are used to adopt. In sum, the logic towards the adoption of UN4MUN procedures is to grant a better experience in terms of acquisition of knowledge about the real processes of negotiation in international organizations (especially the UN) and to foster the development of negotiation skills that can be more useful in a future career. Last but not least, the enhancement of the culture of consensus helps stimulating cooperation instead of competition among the delegates who take part in MUNs.')?>
+                            </p>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'Let’s see some of the general UN4MUN procedures that will be adopted by UFRGSMUN this year:')?>
+                            </p>
+                            <h4 class="topic-item"><?= Yii::t('app', 'Uncomplicating the debate')?></h4>
+                            <p class="modal-text">
+                                <?= Yii::t('app', '“Are there any points or motions on the floor?” To more experienced MUNers: could you believe this sentence is not proferred in real negotiations? They are a lot more simple in comparison with the traditional MUN debates. For example: motions such as Tour de Table, Adjournment of the Session; Opening/Closing of the Speakers List; Closing of the Debate; Introduction of Draft Resolution and Introduction of Amendment simply does not exist in real UN negotiations. By their part, all points (Personal Priviledge, Order and Inquiry) will be from now on called Point of Order. These are all measures that aim at simplifying the debate.')?>
+                            </p>
+                            <h4 class="topic-item"><?= Yii::t('app', 'Position Paper vs. Country Report')?></h4>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'The traditional Position Paper, which is written by the delegates before the simulation in order to clarify their position, will be substituted by the Country Report. This new procedure consists of answering to five given questions, as follows: 1) How does the theme of the agenda impacts your country?; 2) What actions were taken at national level or by organizations other than UN bodies to deal with the subject? Did they succeed?; 3) Did the country sign or ratify the main treaties or conventions on the subject?; 4) What are the main allies and rivals of the country in this subject?; 5) What possible solutions will your country defend during the simulation? The change of the procedure is useful for the following reasons: it makes all documents of positioning uniform; directs the delegates to give more direct and substantial information on the subject that will be discussed and; it contributes to the previous study of the foreign policy of the country that will be represented by the delegate.')?>
+                            </p>
+                            <h4 class="topic-item"><?= Yii::t('app', 'Forms of debate')?></h4>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'Formal-formal: it is the debate conducted by the General Speakers List. Very used in the traditional MUNs, with the adoption of the new procedures it will only be used during the first day of discussions (2nd day of UFRGSMUN). A closed speakers list will be adopted: the delegates shall announce its will of being added to the list in the 1st day of the event.')?>
+                            </p>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'Formal-informal: it is the debate widely known in MUNs as Moderated Caucus. In this method, delegates shall raise their plackards to show their will to speak. The Chair, thus, gives the floor to one of the delegations, which will have its time of speech controlled also by the Chair. All sessions of UFRGSMUN (except for the first, as already stated) will be based on this form of debate.')?>
+                            </p>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'Informal-informal: it is the debate widely known in the MUNs as the Unmoderated Caucus. The delegates are free to speak without necessity of moderation by the Chair. Even though this is the main form of debate of UN negotiations, in UFRGSMUN it will be only adopted when requested by the delegates, in order to render more fluidity to the discussions.')?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="diagonal-section" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0,0 L100,0 L0,100 L0,0" class="schedule-diagonal"  />
+    <path d="M100,0 L0,100 L100,100 L100,0" style="fill: url(#gradient-faq-high)"/>
+    <linearGradient id="gradient-faq-high" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#611331" />
+          <stop offset="100%" stop-color="#911a38" />
+    </linearGradient>
+</svg>
+
+<section class="policies">
+    <article class="container">
+        <h2 class="article-title">FAQ</h2>
+        <p class="article-description">
+            <?= Yii::t('app', 'Do you have any question about UFRGSMUN? Check here all you need to know to participate in this year\'s edition!')?>
+        </p>
+        <button class="button" type="button" data-toggle="modal" data-target="#faq"><?= Yii::t('app', 'FAQ')?></button>
+        <div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="Menu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-wrap"<br/>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <br/><span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-delimiter">
+                            <h2 class="topic-committee">FAQ</h2>
+                            <h3 class="topic-title"><?= Yii::t('app', 'What is UFRGSMUN?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'Created in 2003, UFRGSMUN is a Model United Nations that has grown and is consolidated today as one of the most renowned and traditional MUNs of Brazil, being known as an event which joins academic and administrative excellence.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'Who can apply?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'UFRGSMUN is an event for undergraduated and graduated students of any course and University of Brazil and the world.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'How can I apply?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'First of all, you need to create a delegation, that is a group with 1 up to 20 people that wants to participates. If you do not have a delegation, you can apply anyway choosing a country with only one vacancy or ask to be allocated to some delegation.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'How do my delegation choose the committee? And the representation?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'In the registration form, the delegation must send the preferences of committees and countries. The Secretariat will establish a deadline for the allocation of countries and sending representations to the delegation until one month before the UFRGSMUN.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'For whom the exemption of registration is valid?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'UFRGSMUN grants 10 (ten) exemptions from registration for students with low income. Registration for this modality will be released August 7th. Those who fit the requirements, in addition to the exemption from registration, have preference in solidary accommodation and pay half the value of the social package.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'What should I wear?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'All participants at UFRGSMUN are required to observe a western business attire, or national equivalent. However, the participants outfit do not have to follow a male and female standard. We want you to express your identity without being restrained by the society stereotypes.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'When will UFRGSMUN happen?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'From November 2nd to November 6th of 2016.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'Where UFRGSMUN will happen?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'The venue is the Hotel Plaza São Rafael, located in Porto Alegre, Rio Grande do Sul.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'How much cost the event?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'The registrations costs R$140,00. If paid in two installments it costs R$160,00. The social events package costs R$75,00.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'Is there any refund?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'The registration fees and the parties entrances are non-refundable.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'Do I get a certificate?')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'UFRGSMUN provides a 60 hour certificate only for those who have 75% of presence.')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'Is there a official accomodation? ')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'UFRGSMUN close partnerships with hotels located near the event venue. Besides, we also can allocate few participants in our solidary accomodation. Such information will come soon!')?>
+                            </p>
+                            <h3 class="topic-title"><?= Yii::t('app', 'I still have doubts. How can I get further information? ')?></h3>
+                            <p class="modal-text">
+                                <?= Yii::t('app', 'Contact us by our Facebook page (facebook.com/ufrgsmun) or send us an e-mail to ufrgsmun@ufrgs.br or ufrgsmun@gmail.com')?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
     </article>
 </section>

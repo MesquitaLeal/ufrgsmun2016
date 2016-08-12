@@ -4,6 +4,8 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Committee;
+use app\models\Country;
+use app\models\CommitteeCountry;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -39,6 +41,7 @@ class CommitteeController extends InitController
             'query' => Committee::find(),
         ]);
 
+        Yii::$app->view->title = 'UFRGSMUN 2016 - Committees';
         return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);
@@ -104,6 +107,24 @@ class CommitteeController extends InitController
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionApply()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Committee::find(),
+        ]);
+
+        Yii::$app->view->title = 'UFRGSMUN 2016 - Apply';
+        return $this->render('apply', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionMatrix()
+    {
+        Yii::$app->view->title = 'UFRGSMUN 2016 - Country Matrix';
+        return $this->render('matrix');
     }
 
     /**

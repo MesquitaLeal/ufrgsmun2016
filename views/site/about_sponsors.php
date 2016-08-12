@@ -1,14 +1,84 @@
 <?php
-	$sponsors = array (
-		'audiplo.png',
-		'cafe.png',
-		'ceri.png',
-		'fce.png',
-		'lemonde.png',
-		'dacolonia.png',
-		'gang.png',
-		'grafica.png',
-		'prorext.png',
-	)
+
+$sponsors = [
+	[
+		'image'=>'audiplo.png',
+		'link'=>'http://www.audiplo.com/',
+	],
+	[
+		'image'=>'gang.jpg',
+		'link'=>'http://gang.com.br/',
+	],
+	[
+		'image'=>'rancho.png',
+		'link'=>'http://www.ranchodocupim.com.br/',
+	],
+	[
+		'image'=>'salbrasa.jpg',
+		'link'=>'http://www.salebrasa.com.br/',
+	],
+	[
+		'image'=>'fce.png',
+		'link'=>'http://www.ufrgs.br/fce/',
+	],
+	[
+		'image'=>'propesq.jpg',
+		'link'=>'http://www.ufrgs.br/propesq/',
+	],
+	[
+		'image'=>'prorext.png',
+		'link'=>'http://www.ufrgs.br/prorext/',
+	],
+	[
+		'image'=>'grafica.png',
+		'link'=>'http://www.ufrgs.br/graficaufrgs/',
+	],
+];
+
+$supporters = [
+	[
+		'image'=>'cafe.png',
+		'link'=>'hhttp://www.cafedomercado.com.br/',
+	],
+	[
+		'image'=>'ceri.jpg',
+		'link'=>'https://www.facebook.com/ceri.ufrgs',
+	],
+	[
+		'image'=>'florestal.png',
+		'link'=>'http://www.florestal.com.br/',
+	],
+	[
+		'image'=>'lemonde.jpg',
+		'link'=>'http://www.diplomatique.org.br/',
+	],
+	[
+		'image'=>'dacolonia.png',
+		'link'=>'http://www.dacolonia.com.br/',
+	],
+	[
+		'image'=>'ppgeei.png',
+		'link'=>'http://www.ufrgs.br/ppgeei/',
+	],
+];
+
+$muns = [
+	[
+		'image'=>'amun.png',
+		'link'=>'http://amun.org.br/2016/',
+	],
+	[
+		'image'=>'famun.jpg',
+		'link'=>'http://famun.com.br/',
+	],
+	[
+		'image'=>'temas.png',
+		'link'=>'http://temasmg.com/',
+	],
+	[
+		'image'=>'pampasul.png',
+		'link'=>'https://www.facebook.com/pampasuloficial/',
+	],
+];
 
 ?>

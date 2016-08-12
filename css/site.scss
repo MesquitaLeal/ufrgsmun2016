@@ -375,6 +375,14 @@ header {
     width: 200px;
 }
 
+.button-smaller {
+    width: 60px;
+}
+
+.button-link {
+    color: white;
+}
+
 .modal-title {
     font-family: Montserrat-Regular;
     font-size: 2rem;
@@ -531,6 +539,9 @@ HOME
         color: #911a38;
         background-color: white;
     }
+    .topic-committee {
+        color: #911a38;
+    }
 }
 
 /*
@@ -588,7 +599,8 @@ ABOUT
     color: $about;
 }
 
-.what-mun {
+.what-mun,
+.form-icj {
     background: linear-gradient(to right, $wine-up, $wine-down);
     .button:hover {
         color: $wine-up;
@@ -604,7 +616,9 @@ ABOUT
     }
 }
 
-.what-ufrgsmun {
+.what-ufrgsmun,
+.register,
+.form-b {
     background: linear-gradient(to right, $salmon-up, $salmon-down);
     .button:hover {
         color: $salmon-up;
@@ -620,6 +634,9 @@ ABOUT
     .button:hover {
         color: $light-brown;
         background-color: white;
+    }
+    .topic-committee {
+        color: $light-brown;
     }
 }
 
@@ -650,6 +667,14 @@ ABOUT
     margin-bottom: 10px;
     margin-right: 10px;
     display: inline-block;
+    transition: border .2s ease;
+    &:hover {
+        border: 5px solid $salmon-up;
+    }
+}
+
+.sponsor-link:hover {
+    text-decoration: none;
 }
 
 .sponsor-img {
@@ -682,7 +707,10 @@ THE MUN
     }
 }
 
-.schedule {
+.schedule,
+.un4mun,
+.form-a,
+.form-ip {
     background: $light-brown;
     .button:hover {
         color: $light-brown;
@@ -692,6 +720,7 @@ THE MUN
         color: $light-brown;
     }
 }
+
 
 .schedule-diagonal {
     fill: #AC9281;
@@ -933,6 +962,12 @@ section {
 .topic-title {
     font-size: 1.4rem;
     margin-bottom: 30px;
+}
+
+.topic-item {
+    font-family: Montserrat-Regular;
+    font-size: 1.2rem;
+    margin-top: 30px;
 }
 
 .topic-references {
